@@ -13,8 +13,6 @@ import math
 import geopandas as gpd
 from shapely.geometry import box as shapely_box
 import webbrowser
-import time
-import io
 
 # ========== PALETTES ==========
 PALETTE = {
@@ -219,29 +217,30 @@ def stitch_complete_images(output_dir, veg_output_dir, cells_x_total, cells_y_to
     except Exception as e:
         print(f"Warning: failed to stitch complete images: {e}")
 
-def generate_map_grid_top_left(lat, lon, cells_x, cells_y, road_width_scale, margin_factor, status_label, sections=2):
+def generate_map_grid_center(lat, lon, cells_x, cells_y, road_width_scale, margin_factor, status_label):
     try:
-        # For now, just generate bottom half (35 rows) using working logic
-        actual_cells_y = 35  # Force to 35 rows
-        start_row = 35  # Start from row 35 (bottom half)
-        total_tiles = cells_x * actual_cells_y
-        status_label.config(text="Starting generation (bottom half)...", fg="orange")
-        t0 = time.perf_counter()
-        print(f"params: top-left lat={lat:.5f} lon={lon:.5f} cells={cells_x}x{actual_cells_y} start_row={start_row} tiles={total_tiles} margin={margin_factor}")
-        print("roads/features download starting...")
+        status_label.config(text="Downloading OSM data... Please wait.", fg="orange")
+        print("Step 1: Downloading OSM data...")
         root.update()
 
         cell_size_m = 300
         cell_px = 300
         total_zone_w_m = cell_size_m * cells_x
-        total_zone_h_m = cell_size_m * actual_cells_y
+        total_zone_h_m = cell_size_m * cells_y
         margin_w_m = total_zone_w_m * margin_factor
         margin_h_m = total_zone_h_m * margin_factor
         download_w_m = total_zone_w_m + 2 * margin_w_m
         download_h_m = total_zone_h_m + 2 * margin_h_m
         dist = 0.5 * math.sqrt(download_w_m ** 2 + download_h_m ** 2)
 
-        print(f"dims: zone={int(total_zone_w_m)}x{int(total_zone_h_m)}m download={int(download_w_m)}x{int(download_h_m)}m r={int(dist)}m")
+        print(f"Rendering zone: {total_zone_w_m}m x {total_zone_h_m}m")
+        print(f"Margin applied: {margin_w_m}m (W), {margin_h_m}m (H)")
+        print(f"Download zone: {download_w_m}m x {download_h_m}m (radius {dist:.1f}m)")
+
+        dpi = 100
+        plt.rcParams['path.simplify'] = False
+        plt.rcParams['agg.path.chunksize'] = 0
+        plt.rcParams['lines.antialiased'] = False
 
         # Prepare output dirs
         output_dir = "map_cells"
@@ -250,7 +249,6 @@ def generate_map_grid_top_left(lat, lon, cells_x, cells_y, road_width_scale, mar
             if os.path.exists(dir_name):
                 shutil.rmtree(dir_name)
             os.makedirs(dir_name, exist_ok=True)
-
         tags = {
             'natural': True, 'landuse': True, 'leisure': True,
             'tourism': True, 'amenity': True, 'building': True,
@@ -259,61 +257,38 @@ def generate_map_grid_top_left(lat, lon, cells_x, cells_y, road_width_scale, mar
             'barrier': True, 'railway': True, 'place': True
         }
 
-        # Calculate center point from top-left for working logic
-        utm_crs = compute_utm_crs(lat, lon)
-        tl_gdf = gpd.GeoDataFrame(geometry=gpd.points_from_xy([lon], [lat]), crs="EPSG:4326").to_crs(utm_crs)
-        x_tl = tl_gdf.geometry.x.iloc[0]
-        y_tl = tl_gdf.geometry.y.iloc[0]
-        
-        # Center point for the bottom half (for OSM download)
-        center_x = x_tl + total_zone_w_m / 2
-        center_y = y_tl - (start_row * cell_size_m + total_zone_h_m / 2)
-        
-        # Convert back to lat/lon for working logic
-        center_gdf = gpd.GeoDataFrame(geometry=gpd.points_from_xy([center_x], [center_y]), crs=utm_crs).to_crs("EPSG:4326")
-        center_lat = center_gdf.geometry.y.iloc[0]
-        center_lon = center_gdf.geometry.x.iloc[0]
-
-        t = time.perf_counter()
-        print("roads: start")
-        G = ox.graph_from_point((center_lat, center_lon), dist=dist, network_type='all',
+        print("Downloading road network...")
+        G = ox.graph_from_point((lat, lon), dist=dist, network_type='all',
                                 simplify=False, retain_all=True, truncate_by_edge=True)
         gdf_edges = ox.graph_to_gdfs(G, nodes=False)
-        print(f"roads: count={len(gdf_edges)} t={time.perf_counter()-t:.1f}s")
+        print(f"Roads downloaded: {len(gdf_edges)}")
 
         status_label.config(text="Downloading map features...", fg="orange")
-        print("features: start")
+        print("Step 2: Downloading map features...")
         root.update()
 
-        t = time.perf_counter()
         try:
-            gdf_features = ox.features_from_point((center_lat, center_lon), tags=tags, dist=dist)
-            print(f"features: count={len(gdf_features)} t={time.perf_counter()-t:.1f}s")
+            gdf_features = ox.features_from_point((lat, lon), tags=tags, dist=dist)
+            print(f"Features downloaded: {len(gdf_features)}")
         except Exception as e:
-            print(f"features: fallback due to error='{e}'")
+            print(f"Warning: Some features could not be downloaded: {e}")
             simple_tags = {'natural': True, 'landuse': True, 'highway': True, 'waterway': True}
-            gdf_features = ox.features_from_point((center_lat, center_lon), tags=simple_tags, dist=dist)
-            print(f"features: fallback count={len(gdf_features)} t={time.perf_counter()-t:.1f}s")
+            gdf_features = ox.features_from_point((lat, lon), tags=simple_tags, dist=dist)
 
         status_label.config(text="Projecting geometries...", fg="orange")
-        print("project: start")
+        print("Step 3: Projecting geometries...")
         root.update()
 
-        t = time.perf_counter()
         gdf_edges_utm = ox.projection.project_gdf(gdf_edges)
         utm_crs = gdf_edges_utm.crs
         gdf_features_utm = gdf_features.to_crs(utm_crs)
-        print(f"project: t={time.perf_counter()-t:.1f}s")
 
-        # Use the actual bottom-half coordinates for rendering bounds
-        xmin = x_tl
-        xmax = x_tl + total_zone_w_m
-        ymax = y_tl - (start_row * cell_size_m)
-        ymin = ymax - total_zone_h_m
-        print(f"render: extent=({int(xmin)},{int(xmax)})x({int(ymin)},{int(ymax)})")
+        center_x = gdf_edges_utm.geometry.centroid.x.mean()
+        center_y = gdf_edges_utm.geometry.centroid.y.mean()
+        print(f"Map center: ({center_x:.0f}, {center_y:.0f})")
 
         total_map_px_x = cell_px * cells_x
-        total_map_px_y = cell_px * actual_cells_y
+        total_map_px_y = cell_px * cells_y
         meters_per_pixel = total_zone_w_m / total_map_px_x if total_map_px_x > 0 else 1.0
 
         dpi = 100
@@ -323,12 +298,20 @@ def generate_map_grid_top_left(lat, lon, cells_x, cells_y, road_width_scale, mar
         fig, ax = plt.subplots(figsize=(total_map_px_x / dpi, total_map_px_y / dpi), dpi=dpi)
         fig.subplots_adjust(0, 0, 1, 1)
 
+        xmin = center_x - total_zone_w_m / 2
+        xmax = center_x + total_zone_w_m / 2
+        ymin = center_y - total_zone_h_m / 2
+        ymax = center_y + total_zone_h_m / 2
+
+        print(f"Rendering zone: x[{xmin:.0f}, {xmax:.0f}], y[{ymin:.0f}, {ymax:.0f}]")
+
         ax.add_patch(Rectangle((xmin, ymin), xmax - xmin, ymax - ymin,
                                facecolor=PALETTE['light_grass'], edgecolor='none', zorder=0))
 
         # Draw features
         layer = gdf_features_utm[gdf_features_utm.geometry.type.isin(['Polygon', 'MultiPolygon'])].copy()
         if not layer.empty:
+            print(f"Total land objects: {len(layer)}")
             for col, func in [('natural', get_natural_color), ('landuse', get_landuse_color)]:
                 if col in layer.columns:
                     colors = layer[col].apply(func)
@@ -337,6 +320,7 @@ def generate_map_grid_top_left(lat, lon, cells_x, cells_y, road_width_scale, mar
                         water_mask = layer[col].astype(str).str.lower().isin(['water', 'wetland', 'bay', 'coastline'])
                         mask = mask & ~water_mask
                     if mask.any():
+                        print(f"Rendering {col}: {mask.sum()} objects")
                         layer[mask].plot(ax=ax, color=colors[mask], linewidth=0, zorder=1)
 
         water_layer = gdf_features_utm[gdf_features_utm.geometry.type.isin(['Polygon', 'MultiPolygon'])].copy()
@@ -388,7 +372,7 @@ def generate_map_grid_top_left(lat, lon, cells_x, cells_y, road_width_scale, mar
                 if not sand_polys.empty:
                     sand_polys.plot(ax=ax, color=PALETTE['sand'], linewidth=0, zorder=3)
 
-        t = time.perf_counter()
+        print(f"Sorting and drawing roads: {len(gdf_edges_utm)} roads")
         roads_to_draw = []
         for idx, row in gdf_edges_utm.iterrows():
             highway = row.get('highway')
@@ -396,13 +380,15 @@ def generate_map_grid_top_left(lat, lon, cells_x, cells_y, road_width_scale, mar
                 priority = get_road_priority(highway)
                 roads_to_draw.append((priority, idx, row))
         roads_to_draw.sort(key=lambda x: x[0])
+
+        print(f"Roads sorted by priority, drawing {len(roads_to_draw)} roads...")
         routes_drawn = 0
         for priority, idx, row in roads_to_draw:
             highway = row.get('highway')
             surface = row.get('surface')
             color = get_road_color(highway, surface)
             width_m = get_road_width_m(highway)
-            lw = max((width_m / meters_per_pixel) * road_width_scale, 0.6)
+            lw = max((width_m / meters_per_pixel) * 0.01 * road_width_scale, 0.1)
             try:
                 x, y = row.geometry.xy
                 ax.plot(x, y, color=color, linewidth=lw, solid_capstyle='round', zorder=4)
@@ -410,57 +396,53 @@ def generate_map_grid_top_left(lat, lon, cells_x, cells_y, road_width_scale, mar
             except Exception as e:
                 print(f"Error drawing a road: {e}")
                 continue
-        print(f"roads-draw: drawn={routes_drawn} t={time.perf_counter()-t:.1f}s")
+
+        print(f"Roads drawn: {routes_drawn}")
 
         ax.set_xlim(xmin, xmax)
         ax.set_ylim(ymin, ymax)
         ax.set_axis_off()
         ax.set_aspect('equal')
 
-        # Render to array; optionally also save composites
+        status_label.config(text="Saving complete map image...", fg="orange")
+        print("Step 5: Saving complete map image...")
+        root.update()
+
+        complete_map_filename = "complete_map.png"
         for artist in ax.get_children():
             if hasattr(artist, 'set_antialiased'):
                 artist.set_antialiased(False)
-        t_render = time.perf_counter()
-        buf = io.BytesIO()
-        fig.savefig(buf, format='png', dpi=dpi, bbox_inches='tight', pad_inches=0)
-        buf.seek(0)
-        _img = Image.open(buf).convert('RGB')
-        img_array = np.array(_img)
-        h, w = img_array.shape[:2]
-        print(f"render: t={time.perf_counter()-t_render:.1f}s size={w}x{h}")
 
-        status_label.config(text="Saving complete images...", fg="orange")
-        t = time.perf_counter()
-        complete_map_filename = "complete_map_1.png"
-        Image.fromarray(img_array).save(complete_map_filename)
-        veg_array_full = classify_vegetation_color_vectorized(img_array)
-        complete_veg_filename = "complete_vegetation_map_1.png"
-        Image.fromarray(veg_array_full).save(complete_veg_filename)
-        print(f"stitch: done t={time.perf_counter()-t:.1f}s")
+        plt.savefig(complete_map_filename, dpi=dpi, pad_inches=0, bbox_inches='tight')
+        plt.close()
+        print(f"Complete map saved: {complete_map_filename}")
 
-        status_label.config(text="Slicing maps into cells...", fg="orange")
-        t = time.perf_counter()
-        print("slice: start")
+        status_label.config(text="Processing complete vegetation map...", fg="orange")
+        print("Step 5.5: Processing complete vegetation map...")
         root.update()
 
+        img = Image.open(complete_map_filename).convert("RGB")
+        img_array = np.array(img)
         veg_array = classify_vegetation_color_vectorized(img_array)
-        # Slice this section into tiles
-        for local_row in range(actual_cells_y):
-            global_row = start_row + local_row  # Start from row 35
-            y_start = local_row * cell_px
-            y_end = (local_row + 1) * cell_px
-            for col in range(cells_x):
-                x_start = col * cell_px
-                x_end = (col + 1) * cell_px
-                Image.fromarray(img_array[y_start:y_end, x_start:x_end]).save(f"{output_dir}/{col},{global_row}.png")
-                veg_cell_img = veg_array[y_start:y_end, x_start:x_end]
-                Image.fromarray(veg_cell_img).save(f"{veg_output_dir}/{col},{global_row}_veg.png")
-        print(f"slice: tiles={total_tiles} t={time.perf_counter()-t:.1f}s")
+        complete_veg_filename = "complete_vegetation_map.png"
+        Image.fromarray(veg_array).save(complete_veg_filename)
+        print(f"Complete vegetation map saved: {complete_veg_filename}")
 
-        total_time = time.perf_counter() - t0
-        status_label.config(text=f"{cells_x}x{actual_cells_y} grids generated (bottom half).", fg="#004d00")
-        print(f"done: tiles={total_tiles} mode=bottom-half total={total_time:.1f}s out=map_cells/,map_vegetation/")
+        status_label.config(text="Slicing maps into cells...", fg="orange")
+        print("Step 6: Slicing maps into cells...")
+        root.update()
+
+        for row in range(cells_y):
+            for col in range(cells_x):
+                y_start, y_end = row * cell_px, (row + 1) * cell_px
+                x_start, x_end = col * cell_px, (col + 1) * cell_px
+                cell_img = img_array[y_start:y_end, x_start:x_end]
+                Image.fromarray(cell_img).save(f"{output_dir}/{col},{row}.png")
+                veg_cell_img = veg_array[y_start:y_end, x_start:x_end]
+                Image.fromarray(veg_cell_img).save(f"{veg_output_dir}/{col},{row}_veg.png")
+
+        status_label.config(text=f"{cells_x}x{cells_y} grids generated. Complete images saved.", fg="#004d00")
+        print(f"Map grid generation completed: {cells_x}x{cells_y} tiles saved in '{output_dir}' and '{veg_output_dir}'.")
 
     except Exception as e:
         showerror("Error", f"Map generation error: {e}")
@@ -604,16 +586,14 @@ def add_entry(label_text, default_value, row, tooltip=None):
         entry.bind("<Leave>", on_leave)
     return entry
 
-lat_entry = add_entry("Latitude (top boundary):", 47.515, 0, "Latitude of the top boundary of the map.")
-lon_entry = add_entry("Longitude (left boundary):", -122.527, 1, "Longitude of the left boundary of the map.")
-cells_x_entry = add_entry("Cells X (width):", 50, 2, "Number of cells horizontally.")
-cells_y_entry = add_entry("Cells Y (height):", 70, 3, "Number of cells vertically.")
-margin_entry = add_entry("Download margin (fraction):", 0.1, 4,
+lat_entry = add_entry("Latitude (center):", 47.39000, 0, "Latitude of the map center point.")
+lon_entry = add_entry("Longitude (center):", -122.45400, 1, "Longitude of the map center point.")
+cells_x_entry = add_entry("Cells X (width):", 6, 2, "Number of cells horizontally.")
+cells_y_entry = add_entry("Cells Y (height):", 5, 3, "Number of cells vertically.")
+margin_entry = add_entry("Download margin (fraction):", 0.25, 4,
                          "Extra area to download around the map zone (fraction).")
-width_entry = add_entry("Road width scale:", 1, 5,
+width_entry = add_entry("Road width scale:", 100, 5,
                         "Scale factor for road widths on the generated maps.")
-sections_entry = add_entry("Vertical Divide (sections):", 2, 6,
-                        "Number of horizontal cuts (e.g., 2 = top and bottom).")
 
 def on_generate_maps():
     try:
@@ -633,15 +613,12 @@ def on_generate_maps():
         if total_cells > CELLS_WARNING_THRESHOLD:
             proceed = askyesno(
                 "Large Generation",
-                f"This will generate {cells_x}x{cells_y} = {total_cells} cells, which exceeds the recommended {CELLS_WARNING_THRESHOLD}.\nDo you want to proceed?"
+                f"This will generate {cells_x}x{cells_y} = {total_cells} cells, which exceeds the recommended {CELLS_WARNING_THRESHOLD}.\nDo you really wish to continue?"
             )
             if not proceed:
                 status_label.config(text="Generation cancelled by user.", fg="red")
                 return
-        sections = int(sections_entry.get()) if sections_entry.get() else 2
-        if sections < 1:
-            sections = 1
-        generate_map_grid_top_left(lat, lon, cells_x, cells_y, width_scale, margin, status_label, sections=sections)
+        generate_map_grid_center(lat, lon, cells_x, cells_y, width_scale, margin, status_label)
     except Exception as e:
         showerror("Error", f"Invalid parameter: {e}")
         status_label.config(text="Parameter error.", fg="red")
@@ -677,8 +654,8 @@ def on_preview():
         showerror("Error", f"Invalid parameter: {e}")
         status_label.config(text="Parameter error.", fg="red")
 
-tk.Button(frame, text="Generate Maps + Vegetation", command=on_generate_maps).grid(row=8, column=0, columnspan=2, pady=5)
-tk.Button(frame, text="Preview", command=on_preview).grid(row=9, column=0, columnspan=2, pady=2)
+tk.Button(frame, text="Generate Maps + Vegetation", command=on_generate_maps).grid(row=6, column=0, columnspan=2, pady=5)
+tk.Button(frame, text="Preview", command=on_preview).grid(row=7, column=0, columnspan=2, pady=2)
 
 status_label = tk.Label(root, text="", fg="green")
 status_label.pack(pady=5)
