@@ -221,29 +221,17 @@ def stitch_complete_images(output_dir, veg_output_dir, cells_x_total, cells_y_to
 
 def generate_map_grid_top_left(lat, lon, cells_x, cells_y, road_width_scale, margin_factor, status_label, sections=2):
     try:
-        # For now, just generate bottom half (35 rows) using working logic
-        actual_cells_y = 35  # Force to 35 rows
-        start_row = 35  # Start from row 35 (bottom half)
-        total_tiles = cells_x * actual_cells_y
-        status_label.config(text="Starting generation (bottom half)...", fg="orange")
+        total_tiles = cells_x * cells_y
+        status_label.config(text="Starting generation (both halves)...", fg="orange")
         t0 = time.perf_counter()
-        print(f"params: top-left lat={lat:.5f} lon={lon:.5f} cells={cells_x}x{actual_cells_y} start_row={start_row} tiles={total_tiles} margin={margin_factor}")
-        print("roads/features download starting...")
-        root.update()
-
+        print(f"params: top boundary lat={lat:.5f} left boundary lon={lon:.5f} cells={cells_x}x{cells_y} tiles={total_tiles} margin={margin_factor}")
+        
         cell_size_m = 300
         cell_px = 300
         total_zone_w_m = cell_size_m * cells_x
-        total_zone_h_m = cell_size_m * actual_cells_y
-        margin_w_m = total_zone_w_m * margin_factor
-        margin_h_m = total_zone_h_m * margin_factor
-        download_w_m = total_zone_w_m + 2 * margin_w_m
-        download_h_m = total_zone_h_m + 2 * margin_h_m
-        dist = 0.5 * math.sqrt(download_w_m ** 2 + download_h_m ** 2)
-
-        print(f"dims: zone={int(total_zone_w_m)}x{int(total_zone_h_m)}m download={int(download_w_m)}x{int(download_h_m)}m r={int(dist)}m")
-
-        # Prepare output dirs
+        total_zone_h_m = cell_size_m * cells_y
+        
+        # Prepare output dirs (only once at the start)
         output_dir = "map_cells"
         veg_output_dir = "map_vegetation"
         for dir_name in [output_dir, veg_output_dir]:
@@ -251,216 +239,240 @@ def generate_map_grid_top_left(lat, lon, cells_x, cells_y, road_width_scale, mar
                 shutil.rmtree(dir_name)
             os.makedirs(dir_name, exist_ok=True)
 
-        tags = {
-            'natural': True, 'landuse': True, 'leisure': True,
-            'tourism': True, 'amenity': True, 'building': True,
-            'waterway': True, 'coastline': True, 'water': True,
-            'landcover': True, 'surface': True, 'highway': True,
-            'barrier': True, 'railway': True, 'place': True
-        }
+        # Generate both halves sequentially
+        for half in range(2):
+            half_name = "top" if half == 0 else "bottom"
+            start_row = 0 if half == 0 else 35
+            actual_cells_y = 35
+            half_tiles = cells_x * actual_cells_y
+            
+            print(f"\n--- Generating {half_name} half (rows {start_row}-{start_row+actual_cells_y-1}) ---")
+            status_label.config(text=f"Generating {half_name} half...", fg="orange")
+            root.update()
+            
+            # Calculate dimensions for this half
+            half_zone_h_m = cell_size_m * actual_cells_y
+            margin_w_m = total_zone_w_m * margin_factor
+            margin_h_m = half_zone_h_m * margin_factor
+            download_w_m = total_zone_w_m + 2 * margin_w_m
+            download_h_m = half_zone_h_m + 2 * margin_h_m
+            dist = 0.5 * math.sqrt(download_w_m ** 2 + download_h_m ** 2)
+            
+            print(f"half dims: zone={int(total_zone_w_m)}x{int(half_zone_h_m)}m download={int(download_w_m)}x{int(download_h_m)}m r={int(dist)}m")
 
-        # Calculate center point from top-left for working logic
-        utm_crs = compute_utm_crs(lat, lon)
-        tl_gdf = gpd.GeoDataFrame(geometry=gpd.points_from_xy([lon], [lat]), crs="EPSG:4326").to_crs(utm_crs)
-        x_tl = tl_gdf.geometry.x.iloc[0]
-        y_tl = tl_gdf.geometry.y.iloc[0]
-        
-        # Center point for the bottom half (for OSM download)
-        center_x = x_tl + total_zone_w_m / 2
-        center_y = y_tl - (start_row * cell_size_m + total_zone_h_m / 2)
-        
-        # Convert back to lat/lon for working logic
-        center_gdf = gpd.GeoDataFrame(geometry=gpd.points_from_xy([center_x], [center_y]), crs=utm_crs).to_crs("EPSG:4326")
-        center_lat = center_gdf.geometry.y.iloc[0]
-        center_lon = center_gdf.geometry.x.iloc[0]
+            tags = {
+                'natural': True, 'landuse': True, 'leisure': True,
+                'tourism': True, 'amenity': True, 'building': True,
+                'waterway': True, 'coastline': True, 'water': True,
+                'landcover': True, 'surface': True, 'highway': True,
+                'barrier': True, 'railway': True, 'place': True
+            }
 
-        t = time.perf_counter()
-        print("roads: start")
-        G = ox.graph_from_point((center_lat, center_lon), dist=dist, network_type='all',
-                                simplify=False, retain_all=True, truncate_by_edge=True)
-        gdf_edges = ox.graph_to_gdfs(G, nodes=False)
-        print(f"roads: count={len(gdf_edges)} t={time.perf_counter()-t:.1f}s")
+            # Calculate center point from top-left for working logic
+            utm_crs = compute_utm_crs(lat, lon)
+            tl_gdf = gpd.GeoDataFrame(geometry=gpd.points_from_xy([lon], [lat]), crs="EPSG:4326").to_crs(utm_crs)
+            x_tl = tl_gdf.geometry.x.iloc[0]
+            y_tl = tl_gdf.geometry.y.iloc[0]
+            
+            # Center point for this half (for OSM download)
+            center_x = x_tl + total_zone_w_m / 2
+            center_y = y_tl - (start_row * cell_size_m + half_zone_h_m / 2)
+            
+            # Convert back to lat/lon for working logic
+            center_gdf = gpd.GeoDataFrame(geometry=gpd.points_from_xy([center_x], [center_y]), crs=utm_crs).to_crs("EPSG:4326")
+            center_lat = center_gdf.geometry.y.iloc[0]
+            center_lon = center_gdf.geometry.x.iloc[0]
 
-        status_label.config(text="Downloading map features...", fg="orange")
-        print("features: start")
-        root.update()
+            t = time.perf_counter()
+            print(f"{half_name} roads: start")
+            G = ox.graph_from_point((center_lat, center_lon), dist=dist, network_type='all',
+                                    simplify=False, retain_all=True, truncate_by_edge=True)
+            gdf_edges = ox.graph_to_gdfs(G, nodes=False)
+            print(f"{half_name} roads: count={len(gdf_edges)} t={time.perf_counter()-t:.1f}s")
 
-        t = time.perf_counter()
-        try:
-            gdf_features = ox.features_from_point((center_lat, center_lon), tags=tags, dist=dist)
-            print(f"features: count={len(gdf_features)} t={time.perf_counter()-t:.1f}s")
-        except Exception as e:
-            print(f"features: fallback due to error='{e}'")
-            simple_tags = {'natural': True, 'landuse': True, 'highway': True, 'waterway': True}
-            gdf_features = ox.features_from_point((center_lat, center_lon), tags=simple_tags, dist=dist)
-            print(f"features: fallback count={len(gdf_features)} t={time.perf_counter()-t:.1f}s")
+            status_label.config(text=f"Downloading {half_name} half features...", fg="orange")
+            print(f"{half_name} features: start")
+            root.update()
 
-        status_label.config(text="Projecting geometries...", fg="orange")
-        print("project: start")
-        root.update()
-
-        t = time.perf_counter()
-        gdf_edges_utm = ox.projection.project_gdf(gdf_edges)
-        utm_crs = gdf_edges_utm.crs
-        gdf_features_utm = gdf_features.to_crs(utm_crs)
-        print(f"project: t={time.perf_counter()-t:.1f}s")
-
-        # Use the actual bottom-half coordinates for rendering bounds
-        xmin = x_tl
-        xmax = x_tl + total_zone_w_m
-        ymax = y_tl - (start_row * cell_size_m)
-        ymin = ymax - total_zone_h_m
-        print(f"render: extent=({int(xmin)},{int(xmax)})x({int(ymin)},{int(ymax)})")
-
-        total_map_px_x = cell_px * cells_x
-        total_map_px_y = cell_px * actual_cells_y
-        meters_per_pixel = total_zone_w_m / total_map_px_x if total_map_px_x > 0 else 1.0
-
-        dpi = 100
-        plt.rcParams['path.simplify'] = False
-        plt.rcParams['agg.path.chunksize'] = 0
-        plt.rcParams['lines.antialiased'] = False
-        fig, ax = plt.subplots(figsize=(total_map_px_x / dpi, total_map_px_y / dpi), dpi=dpi)
-        fig.subplots_adjust(0, 0, 1, 1)
-
-        ax.add_patch(Rectangle((xmin, ymin), xmax - xmin, ymax - ymin,
-                               facecolor=PALETTE['light_grass'], edgecolor='none', zorder=0))
-
-        # Draw features
-        layer = gdf_features_utm[gdf_features_utm.geometry.type.isin(['Polygon', 'MultiPolygon'])].copy()
-        if not layer.empty:
-            for col, func in [('natural', get_natural_color), ('landuse', get_landuse_color)]:
-                if col in layer.columns:
-                    colors = layer[col].apply(func)
-                    mask = colors.notna()
-                    if col == 'natural':
-                        water_mask = layer[col].astype(str).str.lower().isin(['water', 'wetland', 'bay', 'coastline'])
-                        mask = mask & ~water_mask
-                    if mask.any():
-                        layer[mask].plot(ax=ax, color=colors[mask], linewidth=0, zorder=1)
-
-        water_layer = gdf_features_utm[gdf_features_utm.geometry.type.isin(['Polygon', 'MultiPolygon'])].copy()
-        if not water_layer.empty:
-            water_layer['is_water'] = False
-            for col in ['natural', 'waterway', 'landuse']:
-                if col in water_layer.columns:
-                    water_mask = water_layer[col].astype(str).str.lower().isin(['water', 'wetland', 'bay', 'reservoir'])
-                    water_layer.loc[water_mask, 'is_water'] = True
-            if 'is_water' in water_layer.columns:
-                water_polys = water_layer[water_layer['is_water']]
-                if not water_polys.empty:
-                    water_polys.plot(ax=ax, color=PALETTE['water'], linewidth=0, zorder=2)
-
-        water_lines = gdf_features_utm[gdf_features_utm.geometry.type.isin(['LineString', 'MultiLineString'])].copy()
-        if not water_lines.empty:
-            water_lines['is_water_line'] = False
-            for col in ['natural', 'waterway']:
-                if col in water_lines.columns:
-                    water_line_mask = water_lines[col].astype(str).str.lower().isin(['coastline', 'river', 'stream', 'canal', 'ditch'])
-                    water_lines.loc[water_line_mask, 'is_water_line'] = True
-            water_line_features = water_lines[water_lines['is_water_line']]
-            if not water_line_features.empty:
-                for _, row in water_line_features.iterrows():
-                    waterway_type = row.get('waterway', '')
-                    natural_type = row.get('natural', '')
-                    if natural_type == 'coastline':
-                        lw = 4
-                    elif waterway_type in ['river', 'canal']:
-                        lw = 3
-                    else:
-                        lw = 2
-                    try:
-                        if hasattr(row.geometry, 'xy'):
-                            x, y = row.geometry.xy
-                            ax.plot(x, y, color=PALETTE['water'], linewidth=lw, solid_capstyle='round', zorder=2)
-                    except Exception as e:
-                        print(f"Error drawing a water line: {e}")
-
-        sand_layer = gdf_features_utm[gdf_features_utm.geometry.type.isin(['Polygon', 'MultiPolygon'])].copy()
-        if not sand_layer.empty:
-            sand_layer['is_sand'] = False
-            for col in ['natural', 'landuse']:
-                if col in sand_layer.columns:
-                    sand_mask = sand_layer[col].astype(str).str.lower().isin(['sand', 'beach'])
-                    sand_layer.loc[sand_mask, 'is_sand'] = True
-            if 'is_sand' in sand_layer.columns:
-                sand_polys = sand_layer[sand_layer['is_sand']]
-                if not sand_polys.empty:
-                    sand_polys.plot(ax=ax, color=PALETTE['sand'], linewidth=0, zorder=3)
-
-        t = time.perf_counter()
-        roads_to_draw = []
-        for idx, row in gdf_edges_utm.iterrows():
-            highway = row.get('highway')
-            if highway:
-                priority = get_road_priority(highway)
-                roads_to_draw.append((priority, idx, row))
-        roads_to_draw.sort(key=lambda x: x[0])
-        routes_drawn = 0
-        for priority, idx, row in roads_to_draw:
-            highway = row.get('highway')
-            surface = row.get('surface')
-            color = get_road_color(highway, surface)
-            width_m = get_road_width_m(highway)
-            lw = max((width_m / meters_per_pixel) * road_width_scale, 0.6)
+            t = time.perf_counter()
             try:
-                x, y = row.geometry.xy
-                ax.plot(x, y, color=color, linewidth=lw, solid_capstyle='round', zorder=4)
-                routes_drawn += 1
+                gdf_features = ox.features_from_point((center_lat, center_lon), tags=tags, dist=dist)
+                print(f"{half_name} features: count={len(gdf_features)} t={time.perf_counter()-t:.1f}s")
             except Exception as e:
-                print(f"Error drawing a road: {e}")
-                continue
-        print(f"roads-draw: drawn={routes_drawn} t={time.perf_counter()-t:.1f}s")
+                print(f"{half_name} features: fallback due to error='{e}'")
+                simple_tags = {'natural': True, 'landuse': True, 'highway': True, 'waterway': True}
+                gdf_features = ox.features_from_point((center_lat, center_lon), tags=simple_tags, dist=dist)
+                print(f"{half_name} features: fallback count={len(gdf_features)} t={time.perf_counter()-t:.1f}s")
 
-        ax.set_xlim(xmin, xmax)
-        ax.set_ylim(ymin, ymax)
-        ax.set_axis_off()
-        ax.set_aspect('equal')
+            status_label.config(text=f"Projecting {half_name} half...", fg="orange")
+            print(f"{half_name} project: start")
+            root.update()
 
-        # Render to array; optionally also save composites
-        for artist in ax.get_children():
-            if hasattr(artist, 'set_antialiased'):
-                artist.set_antialiased(False)
-        t_render = time.perf_counter()
-        buf = io.BytesIO()
-        fig.savefig(buf, format='png', dpi=dpi, bbox_inches='tight', pad_inches=0)
-        buf.seek(0)
-        _img = Image.open(buf).convert('RGB')
-        img_array = np.array(_img)
-        h, w = img_array.shape[:2]
-        print(f"render: t={time.perf_counter()-t_render:.1f}s size={w}x{h}")
+            t = time.perf_counter()
+            gdf_edges_utm = ox.projection.project_gdf(gdf_edges)
+            utm_crs = gdf_edges_utm.crs
+            gdf_features_utm = gdf_features.to_crs(utm_crs)
+            print(f"{half_name} project: t={time.perf_counter()-t:.1f}s")
 
-        status_label.config(text="Saving complete images...", fg="orange")
-        t = time.perf_counter()
-        complete_map_filename = "complete_map_1.png"
-        Image.fromarray(img_array).save(complete_map_filename)
-        veg_array_full = classify_vegetation_color_vectorized(img_array)
-        complete_veg_filename = "complete_vegetation_map_1.png"
-        Image.fromarray(veg_array_full).save(complete_veg_filename)
-        print(f"stitch: done t={time.perf_counter()-t:.1f}s")
+            # Use the actual coordinates for rendering bounds for this half
+            xmin = x_tl
+            xmax = x_tl + total_zone_w_m
+            ymax = y_tl - (start_row * cell_size_m)
+            ymin = ymax - half_zone_h_m
+            print(f"{half_name} render: extent=({int(xmin)},{int(xmax)})x({int(ymin)},{int(ymax)})")
 
-        status_label.config(text="Slicing maps into cells...", fg="orange")
-        t = time.perf_counter()
-        print("slice: start")
-        root.update()
+            total_map_px_x = cell_px * cells_x
+            total_map_px_y = cell_px * actual_cells_y
+            meters_per_pixel = total_zone_w_m / total_map_px_x if total_map_px_x > 0 else 1.0
 
-        veg_array = classify_vegetation_color_vectorized(img_array)
-        # Slice this section into tiles
-        for local_row in range(actual_cells_y):
-            global_row = start_row + local_row  # Start from row 35
-            y_start = local_row * cell_px
-            y_end = (local_row + 1) * cell_px
-            for col in range(cells_x):
-                x_start = col * cell_px
-                x_end = (col + 1) * cell_px
-                Image.fromarray(img_array[y_start:y_end, x_start:x_end]).save(f"{output_dir}/{col},{global_row}.png")
-                veg_cell_img = veg_array[y_start:y_end, x_start:x_end]
-                Image.fromarray(veg_cell_img).save(f"{veg_output_dir}/{col},{global_row}_veg.png")
-        print(f"slice: tiles={total_tiles} t={time.perf_counter()-t:.1f}s")
+            dpi = 100
+            plt.rcParams['path.simplify'] = False
+            plt.rcParams['agg.path.chunksize'] = 0
+            plt.rcParams['lines.antialiased'] = False
+            fig, ax = plt.subplots(figsize=(total_map_px_x / dpi, total_map_px_y / dpi), dpi=dpi)
+            fig.subplots_adjust(0, 0, 1, 1)
+
+            ax.add_patch(Rectangle((xmin, ymin), xmax - xmin, ymax - ymin,
+                                   facecolor=PALETTE['light_grass'], edgecolor='none', zorder=0))
+
+            # Draw features
+            layer = gdf_features_utm[gdf_features_utm.geometry.type.isin(['Polygon', 'MultiPolygon'])].copy()
+            if not layer.empty:
+                for col, func in [('natural', get_natural_color), ('landuse', get_landuse_color)]:
+                    if col in layer.columns:
+                        colors = layer[col].apply(func)
+                        mask = colors.notna()
+                        if col == 'natural':
+                            water_mask = layer[col].astype(str).str.lower().isin(['water', 'wetland', 'bay', 'coastline'])
+                            mask = mask & ~water_mask
+                        if mask.any():
+                            layer[mask].plot(ax=ax, color=colors[mask], linewidth=0, zorder=1)
+
+            water_layer = gdf_features_utm[gdf_features_utm.geometry.type.isin(['Polygon', 'MultiPolygon'])].copy()
+            if not water_layer.empty:
+                water_layer['is_water'] = False
+                for col in ['natural', 'waterway', 'landuse']:
+                    if col in water_layer.columns:
+                        water_mask = water_layer[col].astype(str).str.lower().isin(['water', 'wetland', 'bay', 'reservoir'])
+                        water_layer.loc[water_mask, 'is_water'] = True
+                if 'is_water' in water_layer.columns:
+                    water_polys = water_layer[water_layer['is_water']]
+                    if not water_polys.empty:
+                        water_polys.plot(ax=ax, color=PALETTE['water'], linewidth=0, zorder=2)
+
+            water_lines = gdf_features_utm[gdf_features_utm.geometry.type.isin(['LineString', 'MultiLineString'])].copy()
+            if not water_lines.empty:
+                water_lines['is_water_line'] = False
+                for col in ['natural', 'waterway']:
+                    if col in water_lines.columns:
+                        water_line_mask = water_lines[col].astype(str).str.lower().isin(['coastline', 'river', 'stream', 'canal', 'ditch'])
+                        water_lines.loc[water_line_mask, 'is_water_line'] = True
+                water_line_features = water_lines[water_lines['is_water_line']]
+                if not water_line_features.empty:
+                    for _, row in water_line_features.iterrows():
+                        waterway_type = row.get('waterway', '')
+                        natural_type = row.get('natural', '')
+                        if natural_type == 'coastline':
+                            lw = 4
+                        elif waterway_type in ['river', 'canal']:
+                            lw = 3
+                        else:
+                            lw = 2
+                        try:
+                            if hasattr(row.geometry, 'xy'):
+                                x, y = row.geometry.xy
+                                ax.plot(x, y, color=PALETTE['water'], linewidth=lw, solid_capstyle='round', zorder=2)
+                        except Exception as e:
+                            print(f"Error drawing a water line: {e}")
+
+            sand_layer = gdf_features_utm[gdf_features_utm.geometry.type.isin(['Polygon', 'MultiPolygon'])].copy()
+            if not sand_layer.empty:
+                sand_layer['is_sand'] = False
+                for col in ['natural', 'landuse']:
+                    if col in sand_layer.columns:
+                        sand_mask = sand_layer[col].astype(str).str.lower().isin(['sand', 'beach'])
+                        sand_layer.loc[sand_mask, 'is_sand'] = True
+                if 'is_sand' in sand_layer.columns:
+                    sand_polys = sand_layer[sand_layer['is_sand']]
+                    if not sand_polys.empty:
+                        sand_polys.plot(ax=ax, color=PALETTE['sand'], linewidth=0, zorder=3)
+
+            t = time.perf_counter()
+            roads_to_draw = []
+            for idx, row in gdf_edges_utm.iterrows():
+                highway = row.get('highway')
+                if highway:
+                    priority = get_road_priority(highway)
+                    roads_to_draw.append((priority, idx, row))
+            roads_to_draw.sort(key=lambda x: x[0])
+            routes_drawn = 0
+            for priority, idx, row in roads_to_draw:
+                highway = row.get('highway')
+                surface = row.get('surface')
+                color = get_road_color(highway, surface)
+                width_m = get_road_width_m(highway)
+                lw = max((width_m / meters_per_pixel) * road_width_scale, 0.6)
+                try:
+                    x, y = row.geometry.xy
+                    ax.plot(x, y, color=color, linewidth=lw, solid_capstyle='round', zorder=4)
+                    routes_drawn += 1
+                except Exception as e:
+                    print(f"Error drawing a road: {e}")
+                    continue
+            print(f"{half_name} roads-draw: drawn={routes_drawn} t={time.perf_counter()-t:.1f}s")
+
+            ax.set_xlim(xmin, xmax)
+            ax.set_ylim(ymin, ymax)
+            ax.set_axis_off()
+            ax.set_aspect('equal')
+
+            # Render to array
+            for artist in ax.get_children():
+                if hasattr(artist, 'set_antialiased'):
+                    artist.set_antialiased(False)
+            t_render = time.perf_counter()
+            buf = io.BytesIO()
+            fig.savefig(buf, format='png', dpi=dpi, bbox_inches='tight', pad_inches=0)
+            buf.seek(0)
+            _img = Image.open(buf).convert('RGB')
+            img_array = np.array(_img)
+            h, w = img_array.shape[:2]
+            print(f"{half_name} render: t={time.perf_counter()-t_render:.1f}s size={w}x{h}")
+
+            # Save half composite
+            status_label.config(text=f"Saving {half_name} half...", fg="orange")
+            t = time.perf_counter()
+            half_num = half + 1
+            complete_map_filename = f"complete_map_{half_num}.png"
+            Image.fromarray(img_array).save(complete_map_filename)
+            veg_array_full = classify_vegetation_color_vectorized(img_array)
+            complete_veg_filename = f"complete_vegetation_map_{half_num}.png"
+            Image.fromarray(veg_array_full).save(complete_veg_filename)
+            print(f"{half_name} stitch: done t={time.perf_counter()-t:.1f}s")
+
+            # Slice this half into tiles
+            status_label.config(text=f"Slicing {half_name} half...", fg="orange")
+            t = time.perf_counter()
+            print(f"{half_name} slice: start")
+            root.update()
+
+            veg_array = classify_vegetation_color_vectorized(img_array)
+            for local_row in range(actual_cells_y):
+                global_row = start_row + local_row
+                y_start = local_row * cell_px
+                y_end = (local_row + 1) * cell_px
+                for col in range(cells_x):
+                    x_start = col * cell_px
+                    x_end = (col + 1) * cell_px
+                    Image.fromarray(img_array[y_start:y_end, x_start:x_end]).save(f"{output_dir}/{col},{global_row}.png")
+                    Image.fromarray(veg_array[y_start:y_end, x_start:x_end]).save(f"{veg_output_dir}/{col},{global_row}_veg.png")
+            print(f"{half_name} slice: tiles={half_tiles} t={time.perf_counter()-t:.1f}s")
+            
+            plt.close(fig)  # Clean up the figure
 
         total_time = time.perf_counter() - t0
-        status_label.config(text=f"{cells_x}x{actual_cells_y} grids generated (bottom half).", fg="#004d00")
-        print(f"done: tiles={total_tiles} mode=bottom-half total={total_time:.1f}s out=map_cells/,map_vegetation/")
+        status_label.config(text=f"{cells_x}x{cells_y} grids generated (both halves).", fg="#004d00")
+        print(f"done: tiles={total_tiles} mode=both-halves total={total_time:.1f}s out=map_cells/,map_vegetation/")
 
     except Exception as e:
         showerror("Error", f"Map generation error: {e}")
