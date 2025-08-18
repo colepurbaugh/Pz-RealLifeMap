@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<world version="1.0" width="50" height="70">
+ <BMPToTMX>
+  <tmxexportdir path="worlded"/>
+  <rulesfile path=""/>
+  <blendsfile path=""/>
+  <mapbasefile path=""/>
+  <assign-maps-to-world checked="true"/>
+  <warn-unknown-colors checked="true"/>
+  <compress checked="true"/>
+  <copy-pixels checked="true"/>
+  <update-existing checked="false"/>
+ </BMPToTMX>
+ <TMXToBMP>
+  <mainImage generate="true"/>
+  <vegetationImage generate="true"/>
+  <buildingsImage path="" generate="false"/>
+ </TMXToBMP>
+ <GenerateLots>
+  <exportdir path=""/>
+  <ZombieSpawnMap path=""/>
+  <TileDefFolder path=""/>
+  <worldOrigin origin="0,0"/>
+ </GenerateLots>
+ <LuaSettings>
+  <spawnPointsFile path=""/>
+  <worldObjectsFile path=""/>
+ </LuaSettings>
+ <bmp path="map_cells/0,0.png" x="0" y="0" width="1" height="1"/>
+ <bmp path="map_cells/0,1.png" x="0" y="1" width="1" height="1"/>
+ <bmp path="map_cells/0,2.png" x="0" y="2" width="1" height="1"/>
+ <bmp path="map_cells/0,3.png" x="0" y="3" width="1" height="1"/>
+ <bmp path="map_cells/0,4.png" x="0" y="4" width="1" height="1"/>
+ <bmp path="map_cells/0,5.png" x="0" y="5" width="1" height="1"/>
+ <bmp path="map_cells/0,6.png" x="0" y="6" width="1" height="1"/>
+ <bmp path="map_cells/0,7.png" x="0" y="7" width="1" height="1"/>
+ <bmp path="map_cells/0,8.png" x="0" y="8" width="1" height="1"/>
+ <bmp path="map_cells/0,9.png" x="0" y="9" width="1" height="1"/>
+ <bmp path="map_cells/1,0.png" x="1" y="0" width="1" height="1"/>
+ <bmp path="map_cells/1,2.png" x="1" y="1" width="1" height="1"/>
+ <bmp path="map_cells/1,1.png" x="1" y="1" width="1" height="1"/>
+ <bmp path="map_cells/1,2.png" x="1" y="2" width="1" height="1"/>
+ <bmp path="map_cells/1,3.png" x="1" y="3" width="1" height="1"/>
+ <bmp path="map_cells/2,3.png" x="2" y="3" width="1" height="1"/>
+ <bmp path="map_cells/2,4.png" x="2" y="4" width="1" height="1"/>
+ <bmp path="map_cells/2,0.png" x="2" y="0" width="1" height="1"/>
+ <bmp path="map_cells/2,1.png" x="2" y="1" width="1" height="1"/>
+ <bmp path="map_cells/2,2.png" x="2" y="2" width="1" height="1"/>
+ <bmp path="map_cells/1,4.png" x="1" y="4" width="1" height="1"/>
+ <bmp path="map_cells/1,5.png" x="1" y="5" width="1" height="1"/>
+ <bmp path="map_cells/1,6.png" x="1" y="6" width="1" height="1"/>
+ <bmp path="map_cells/1,7.png" x="1" y="7" width="1" height="1"/>
+ <bmp path="map_cells/1,8.png" x="1" y="8" width="1" height="1"/>
+ <bmp path="map_cells/1,9.png" x="1" y="9" width="1" height="1"/>
+ <bmp path="map_cells/1,10.png" x="1" y="10" width="1" height="1"/>
+ <bmp path="map_cells/1,11.png" x="1" y="11" width="1" height="1"/>
+ <bmp path="map_cells/10,0.png" x="10" y="0" width="1" height="1"/>
+ <bmp path="map_cells/10,1.png" x="10" y="1" width="1" height="1"/>
+ <bmp path="map_cells/10,2.png" x="10" y="2" width="1" height="1"/>
+ <bmp path="map_cells/10,3.png" x="10" y="3" width="1" height="1"/>
+ <bmp path="map_cells/10,4.png" x="10" y="4" width="1" height="1"/>
+ <bmp path="map_cells/10,5.png" x="10" y="5" width="1" height="1"/>
+ <bmp path="map_cells/10,6.png" x="10" y="6" width="1" height="1"/>
+ <bmp path="map_cells/10,7.png" x="10" y="7" width="1" height="1"/>
+ <bmp path="map_cells/13,0.png" x="13" y="0" width="1" height="1"/>
+ <bmp path="map_cells/13,1.png" x="13" y="1" width="1" height="1"/>
+ <bmp path="map_cells/13,2.png" x="13" y="2" width="1" height="1"/>
+ <bmp path="map_cells/13,3.png" x="13" y="3" width="1" height="1"/>
+ <bmp path="map_cells/13,4.png" x="13" y="4" width="1" height="1"/>
+ <bmp path="map_cells/13,5.png" x="13" y="5" width="1" height="1"/>
+ <bmp path="map_cells/13,6.png" x="13" y="6" width="1" height="1"/>
+ <bmp path="map_cells/13,7.png" x="13" y="7" width="1" height="1"/>
+ <bmp path="map_cells/13,8.png" x="13" y="8" width="1" height="1"/>
+ <bmp path="map_cells/12,0.png" x="12" y="0" width="1" height="1"/>
+ <bmp path="map_cells/12,1.png" x="12" y="1" width="1" height="1"/>
+ <bmp path="map_cells/12,2.png" x="12" y="2" width="1" height="1"/>
+ <bmp path="map_cells/12,3.png" x="12" y="3" width="1" height="1"/>
+ <bmp path="map_cells/12,4.png" x="12" y="4" width="1" height="1"/>
+ <bmp path="map_cells/12,5.png" x="12" y="5" width="1" height="1"/>
+ <bmp path="map_cells/12,6.png" x="12" y="6" width="1" height="1"/>
+ <bmp path="map_cells/3,0.png" x="3" y="0" width="1" height="1"/>
+ <bmp path="map_cells/3,1.png" x="3" y="1" width="1" height="1"/>
+ <bmp path="map_cells/3,2.png" x="3" y="2" width="1" height="1"/>
+ <bmp path="map_cells/3,3.png" x="3" y="3" width="1" height="1"/>
+ <bmp path="map_cells/3,4.png" x="3" y="4" width="1" height="1"/>
+ <bmp path="map_cells/3,5.png" x="3" y="5" width="1" height="1"/>
+ <bmp path="map_cells/4,0.png" x="4" y="0" width="1" height="1"/>
+ <bmp path="map_cells/4,1.png" x="4" y="1" width="1" height="1"/>
+ <bmp path="map_cells/4,2.png" x="4" y="2" width="1" height="1"/>
+ <bmp path="map_cells/4,3.png" x="4" y="3" width="1" height="1"/>
+ <bmp path="map_cells/4,4.png" x="4" y="4" width="1" height="1"/>
+ <bmp path="map_cells/4,5.png" x="4" y="5" width="1" height="1"/>
+ <bmp path="map_cells/4,6.png" x="4" y="6" width="1" height="1"/>
+ <bmp path="map_cells/5,0.png" x="5" y="0" width="1" height="1"/>
+ <bmp path="map_cells/5,1.png" x="5" y="1" width="1" height="1"/>
+ <bmp path="map_cells/5,2.png" x="5" y="2" width="1" height="1"/>
+ <bmp path="map_cells/5,3.png" x="5" y="3" width="1" height="1"/>
+ <bmp path="map_cells/5,4.png" x="5" y="4" width="1" height="1"/>
+ <bmp path="map_cells/5,5.png" x="5" y="5" width="1" height="1"/>
+ <bmp path="map_cells/5,6.png" x="5" y="6" width="1" height="1"/>
+ <bmp path="map_cells/5,7.png" x="5" y="7" width="1" height="1"/>
+ <bmp path="map_cells/6,0.png" x="6" y="0" width="1" height="1"/>
+ <bmp path="map_cells/6,1.png" x="6" y="1" width="1" height="1"/>
+ <bmp path="map_cells/6,2.png" x="6" y="2" width="1" height="1"/>
+ <bmp path="map_cells/6,3.png" x="6" y="3" width="1" height="1"/>
+ <bmp path="map_cells/6,4.png" x="6" y="4" width="1" height="1"/>
+ <bmp path="map_cells/6,5.png" x="6" y="5" width="1" height="1"/>
+ <bmp path="map_cells/6,6.png" x="6" y="6" width="1" height="1"/>
+ <bmp path="map_cells/6,7.png" x="6" y="7" width="1" height="1"/>
+ <bmp path="map_cells/6,8.png" x="6" y="8" width="1" height="1"/>
+ <bmp path="map_cells/6,9.png" x="6" y="9" width="1" height="1"/>
+ <bmp path="map_cells/7,0.png" x="7" y="0" width="1" height="1"/>
+ <bmp path="map_cells/7,1.png" x="7" y="1" width="1" height="1"/>
+ <bmp path="map_cells/7,2.png" x="7" y="2" width="1" height="1"/>
+ <bmp path="map_cells/7,3.png" x="7" y="3" width="1" height="1"/>
+ <bmp path="map_cells/14,0.png" x="14" y="0" width="1" height="1"/>
+ <bmp path="map_cells/14,1.png" x="14" y="1" width="1" height="1"/>
+ <bmp path="map_cells/14,2.png" x="14" y="2" width="1" height="1"/>
+ <bmp path="map_cells/14,3.png" x="14" y="3" width="1" height="1"/>
+ <bmp path="map_cells/14,4.png" x="14" y="4" width="1" height="1"/>
+ <bmp path="map_cells/14,5.png" x="14" y="5" width="1" height="1"/>
+ <bmp path="map_cells/14,6.png" x="14" y="6" width="1" height="1"/>
+ <bmp path="map_cells/14,7.png" x="14" y="7" width="1" height="1"/>
+ <bmp path="map_cells/14,8.png" x="14" y="8" width="1" height="1"/>
+ <bmp path="map_cells/14,9.png" x="14" y="9" width="1" height="1"/>
+ <bmp path="map_cells/15,0.png" x="15" y="0" width="1" height="1"/>
+ <bmp path="map_cells/15,1.png" x="15" y="1" width="1" height="1"/>
+ <bmp path="map_cells/15,2.png" x="15" y="2" width="1" height="1"/>
+ <bmp path="map_cells/15,3.png" x="15" y="3" width="1" height="1"/>
+ <bmp path="map_cells/15,4.png" x="15" y="4" width="1" height="1"/>
+ <bmp path="map_cells/15,5.png" x="15" y="5" width="1" height="1"/>
+ <bmp path="map_cells/15,6.png" x="15" y="6" width="1" height="1"/>
+ <bmp path="map_cells/15,7.png" x="15" y="7" width="1" height="1"/>
+ <bmp path="map_cells/15,8.png" x="15" y="8" width="1" height="1"/>
+ <bmp path="map_cells/15,9.png" x="15" y="9" width="1" height="1"/>
+ <bmp path="map_cells/15,10.png" x="15" y="10" width="1" height="1"/>
+ <bmp path="map_cells/16,0.png" x="16" y="0" width="1" height="1"/>
+ <bmp path="map_cells/16,1.png" x="16" y="1" width="1" height="1"/>
+ <bmp path="map_cells/16,2.png" x="16" y="2" width="1" height="1"/>
+ <bmp path="map_cells/16,3.png" x="16" y="3" width="1" height="1"/>
+ <bmp path="map_cells/16,4.png" x="16" y="4" width="1" height="1"/>
+ <bmp path="map_cells/16,5.png" x="16" y="5" width="1" height="1"/>
+ <bmp path="map_cells/16,6.png" x="16" y="6" width="1" height="1"/>
+ <bmp path="map_cells/16,7.png" x="16" y="7" width="1" height="1"/>
+ <bmp path="map_cells/16,8.png" x="16" y="8" width="1" height="1"/>
+ <bmp path="map_cells/16,9.png" x="16" y="9" width="1" height="1"/>
+ <bmp path="map_cells/16,10.png" x="16" y="10" width="1" height="1"/>
+ <bmp path="map_cells/16,11.png" x="16" y="11" width="1" height="1"/>
+ <bmp path="map_cells/17,0.png" x="17" y="0" width="1" height="1"/>
+ <bmp path="map_cells/17,1.png" x="17" y="1" width="1" height="1"/>
+ <bmp path="map_cells/17,2.png" x="17" y="2" width="1" height="1"/>
+ <bmp path="map_cells/17,3.png" x="17" y="3" width="1" height="1"/>
+ <bmp path="map_cells/17,4.png" x="17" y="4" width="1" height="1"/>
+ <bmp path="map_cells/17,5.png" x="17" y="5" width="1" height="1"/>
+ <bmp path="map_cells/17,6.png" x="17" y="6" width="1" height="1"/>
+ <bmp path="map_cells/17,7.png" x="17" y="7" width="1" height="1"/>
+ <bmp path="map_cells/17,8.png" x="17" y="8" width="1" height="1"/>
+ <bmp path="map_cells/17,9.png" x="17" y="9" width="1" height="1"/>
+ <bmp path="map_cells/17,10.png" x="17" y="10" width="1" height="1"/>
+ <bmp path="map_cells/17,11.png" x="17" y="11" width="1" height="1"/>
+ <bmp path="map_cells/18,0.png" x="18" y="0" width="1" height="1"/>
+ <bmp path="map_cells/18,1.png" x="18" y="1" width="1" height="1"/>
+ <bmp path="map_cells/18,2.png" x="18" y="2" width="1" height="1"/>
+ <bmp path="map_cells/18,3.png" x="18" y="3" width="1" height="1"/>
+ <bmp path="map_cells/18,4.png" x="18" y="4" width="1" height="1"/>
+ <bmp path="map_cells/18,5.png" x="18" y="5" width="1" height="1"/>
+ <bmp path="map_cells/17,13.png" x="17" y="13" width="1" height="1"/>
+ <bmp path="map_cells/17,12.png" x="17" y="12" width="1" height="1"/>
+ <bmp path="map_cells/17,14.png" x="17" y="14" width="1" height="1"/>
+ <bmp path="map_cells/17,15.png" x="17" y="15" width="1" height="1"/>
+ <bmp path="map_cells/17,16.png" x="17" y="16" width="1" height="1"/>
+ <bmp path="map_cells/17,17.png" x="17" y="17" width="1" height="1"/>
+ <bmp path="map_cells/17,18.png" x="17" y="18" width="1" height="1"/>
+ <bmp path="map_cells/17,19.png" x="17" y="19" width="1" height="1"/>
+ <bmp path="map_cells/18,12.png" x="18" y="12" width="1" height="1"/>
+ <bmp path="map_cells/18,13.png" x="18" y="13" width="1" height="1"/>
+ <bmp path="map_cells/18,14.png" x="18" y="14" width="1" height="1"/>
+ <bmp path="map_cells/18,15.png" x="18" y="15" width="1" height="1"/>
+ <bmp path="map_cells/18,16.png" x="18" y="16" width="1" height="1"/>
+ <bmp path="map_cells/18,17.png" x="18" y="17" width="1" height="1"/>
+ <bmp path="map_cells/18,18.png" x="18" y="18" width="1" height="1"/>
+ <bmp path="map_cells/18,19.png" x="18" y="19" width="1" height="1"/>
+ <bmp path="map_cells/19,12.png" x="19" y="12" width="1" height="1"/>
+ <bmp path="map_cells/19,13.png" x="19" y="13" width="1" height="1"/>
+ <bmp path="map_cells/19,14.png" x="19" y="14" width="1" height="1"/>
+ <bmp path="map_cells/19,15.png" x="19" y="15" width="1" height="1"/>
+ <bmp path="map_cells/19,16.png" x="19" y="16" width="1" height="1"/>
+ <bmp path="map_cells/19,17.png" x="19" y="17" width="1" height="1"/>
+ <bmp path="map_cells/19,18.png" x="19" y="18" width="1" height="1"/>
+ <bmp path="map_cells/19,19.png" x="19" y="19" width="1" height="1"/>
+ <bmp path="map_cells/19,20.png" x="19" y="20" width="1" height="1"/>
+ <bmp path="map_cells/18,11.png" x="18" y="11" width="1" height="1"/>
+ <propertyenum name="Direction" choices="N,S,W,E" multi="false"/>
+ <propertyenum name="Pose" choices="pose01,pose02,pose03" multi="false"/>
+ <propertyenum name="Skin" choices="White,Black" multi="false"/>
+ <propertyenum name="RoomTone" choices="Generic,Barn,Mall,Warehouse,Prison,Church,Office,Factory" multi="false"/>
+ <propertydef name="Direction" default="N" enum="Direction"/>
+ <propertydef name="FaceDirection" default="true"/>
+ <propertydef name="WaterDirection" default="0.0"/>
+ <propertydef name="WaterSpeed" default="0.0"/>
+ <propertydef name="WaterGround" default="false"/>
+ <propertydef name="WaterShore" default="true"/>
+ <propertydef name="Female" default="true"/>
+ <propertydef name="Outfit" default=""/>
+ <propertydef name="Pose" default="pose01" enum="Pose"/>
+ <propertydef name="Script" default=""/>
+ <propertydef name="Skin" default="White" enum="Skin"/>
+ <propertydef name="RoomTone" default="Generic" enum="RoomTone"/>
+ <propertydef name="EntireBuilding" default="false"/>
+ <template name="ParkingStallN">
+  <property name="Direction" value="N"/>
+ </template>
+ <template name="ParkingStallS">
+  <property name="Direction" value="S"/>
+ </template>
+ <template name="ParkingStallW">
+  <property name="Direction" value="W"/>
+ </template>
+ <template name="ParkingStallE">
+  <property name="Direction" value="E"/>
+ </template>
+ <template name="WaterFlowN">
+  <property name="WaterDirection" value="0"/>
+  <property name="WaterSpeed" value="1.0"/>
+ </template>
+ <template name="WaterFlowS">
+  <property name="WaterDirection" value="180"/>
+  <property name="WaterSpeed" value="1.0"/>
+ </template>
+ <template name="WaterFlowE">
+  <property name="WaterDirection" value="90"/>
+  <property name="WaterSpeed" value="1.0"/>
+ </template>
+ <template name="WaterFlowW">
+  <property name="WaterDirection" value="270"/>
+  <property name="WaterSpeed" value="1.0"/>
+ </template>
+ <template name="WaterZone">
+  <property name="WaterGround" value="false"/>
+  <property name="WaterShore" value="true"/>
+ </template>
+ <template name="RoomTone">
+  <property name="RoomTone" value="Generic"/>
+  <property name="EntireBuilding" value="false"/>
+ </template>
+ <objecttype name="TownZone"/>
+ <objecttype name="Forest"/>
+ <objecttype name="DeepForest"/>
+ <objecttype name="Nav"/>
+ <objecttype name="Vegitation"/>
+ <objecttype name="TrailerPark"/>
+ <objecttype name="Farm"/>
+ <objecttype name="ParkingStall"/>
+ <objecttype name="FarmLand"/>
+ <objecttype name="WaterFlow"/>
+ <objecttype name="WaterZone"/>
+ <objecttype name="Mannequin"/>
+ <objecttype name="RoomTone"/>
+ <objectgroup name="ParkingStall" color="#ff007f" defaulttype="ParkingStall"/>
+ <objectgroup name="TownZone" color="#aa0000" defaulttype="TownZone"/>
+ <objectgroup name="Forest" color="#00aa00" defaulttype="Forest"/>
+ <objectgroup name="Nav" color="#55aaff" defaulttype="Nav"/>
+ <objectgroup name="DeepForest" color="#003500" defaulttype="DeepForest"/>
+ <objectgroup name="Vegitation" color="#b3b300" defaulttype="Vegitation"/>
+ <objectgroup name="TrailerPark" color="#f50000" defaulttype="TrailerPark"/>
+ <objectgroup name="Farm" color="#55ff7f" defaulttype="Farm"/>
+ <objectgroup name="FarmLand" color="#bcff7d" defaulttype="FarmLand"/>
+ <objectgroup name="WaterFlow" color="#0000ff" defaulttype="WaterFlow"/>
+ <objectgroup name="WaterZone" color="#0000ff" defaulttype="WaterZone"/>
+ <objectgroup name="Mannequin" color="#0000ff" defaulttype="Mannequin"/>
+ <objectgroup name="RoomTone" color="#0000ff" defaulttype="RoomTone"/>
+ <cell x="0" y="0" map="worlded/0,0_0_0.tmx"/>
+ <cell x="1" y="0" map="worlded/1,0_1_0.tmx"/>
+ <cell x="2" y="0" map="worlded/2,0_2_0.tmx"/>
+ <cell x="3" y="0" map="worlded/3,0_3_0.tmx"/>
+ <cell x="4" y="0" map="worlded/4,0_4_0.tmx"/>
+ <cell x="5" y="0" map="worlded/5,0_5_0.tmx"/>
+ <cell x="6" y="0" map="worlded/6,0_6_0.tmx"/>
+ <cell x="7" y="0" map="worlded/7,0_7_0.tmx"/>
+ <cell x="10" y="0" map="worlded/10,0_10_0.tmx"/>
+ <cell x="12" y="0" map="worlded/12,0_12_0.tmx"/>
+ <cell x="13" y="0" map="worlded/13,0_13_0.tmx"/>
+ <cell x="14" y="0" map="worlded/14,0_14_0.tmx"/>
+ <cell x="15" y="0" map="worlded/15,0_15_0.tmx"/>
+ <cell x="16" y="0" map="worlded/16,0_16_0.tmx"/>
+ <cell x="17" y="0" map="worlded/17,0_17_0.tmx"/>
+ <cell x="18" y="0" map="worlded/18,0_18_0.tmx"/>
+ <cell x="0" y="1" map="worlded/0,1_0_1.tmx"/>
+ <cell x="1" y="1" map="worlded/1,1_1_1.tmx"/>
+ <cell x="2" y="1" map="worlded/2,1_2_1.tmx"/>
+ <cell x="3" y="1" map="worlded/3,1_3_1.tmx"/>
+ <cell x="4" y="1" map="worlded/4,1_4_1.tmx"/>
+ <cell x="5" y="1" map="worlded/5,1_5_1.tmx"/>
+ <cell x="6" y="1" map="worlded/6,1_6_1.tmx"/>
+ <cell x="7" y="1" map="worlded/7,1_7_1.tmx"/>
+ <cell x="10" y="1" map="worlded/10,1_10_1.tmx"/>
+ <cell x="12" y="1" map="worlded/12,1_12_1.tmx"/>
+ <cell x="13" y="1" map="worlded/13,1_13_1.tmx"/>
+ <cell x="14" y="1" map="worlded/14,1_14_1.tmx"/>
+ <cell x="15" y="1" map="worlded/15,1_15_1.tmx"/>
+ <cell x="16" y="1" map="worlded/16,1_16_1.tmx"/>
+ <cell x="17" y="1" map="worlded/17,1_17_1.tmx"/>
+ <cell x="18" y="1" map="worlded/18,1_18_1.tmx"/>
+ <cell x="0" y="2" map="worlded/0,2_0_2.tmx"/>
+ <cell x="1" y="2" map="worlded/1,2_1_2.tmx"/>
+ <cell x="2" y="2" map="worlded/2,2_2_2.tmx"/>
+ <cell x="3" y="2" map="worlded/3,2_3_2.tmx"/>
+ <cell x="4" y="2" map="worlded/4,2_4_2.tmx"/>
+ <cell x="5" y="2" map="worlded/5,2_5_2.tmx"/>
+ <cell x="6" y="2" map="worlded/6,2_6_2.tmx"/>
+ <cell x="7" y="2" map="worlded/7,2_7_2.tmx"/>
+ <cell x="10" y="2" map="worlded/10,2_10_2.tmx"/>
+ <cell x="12" y="2" map="worlded/12,2_12_2.tmx"/>
+ <cell x="13" y="2" map="worlded/13,2_13_2.tmx"/>
+ <cell x="14" y="2" map="worlded/14,2_14_2.tmx"/>
+ <cell x="15" y="2" map="worlded/15,2_15_2.tmx"/>
+ <cell x="16" y="2" map="worlded/16,2_16_2.tmx"/>
+ <cell x="17" y="2" map="worlded/17,2_17_2.tmx"/>
+ <cell x="18" y="2" map="worlded/18,2_18_2.tmx"/>
+ <cell x="0" y="3" map="worlded/0,3_0_3.tmx"/>
+ <cell x="1" y="3" map="worlded/1,3_1_3.tmx"/>
+ <cell x="2" y="3" map="worlded/2,3_2_3.tmx"/>
+ <cell x="3" y="3" map="worlded/3,3_3_3.tmx"/>
+ <cell x="4" y="3" map="worlded/4,3_4_3.tmx"/>
+ <cell x="5" y="3" map="worlded/5,3_5_3.tmx"/>
+ <cell x="6" y="3" map="worlded/6,3_6_3.tmx"/>
+ <cell x="7" y="3" map="worlded/7,3_7_3.tmx"/>
+ <cell x="10" y="3" map="worlded/10,3_10_3.tmx"/>
+ <cell x="12" y="3" map="worlded/12,3_12_3.tmx"/>
+ <cell x="13" y="3" map="worlded/13,3_13_3.tmx"/>
+ <cell x="14" y="3" map="worlded/14,3_14_3.tmx"/>
+ <cell x="15" y="3" map="worlded/15,3_15_3.tmx"/>
+ <cell x="16" y="3" map="worlded/16,3_16_3.tmx"/>
+ <cell x="17" y="3" map="worlded/17,3_17_3.tmx"/>
+ <cell x="18" y="3" map="worlded/18,3_18_3.tmx"/>
+ <cell x="0" y="4" map="worlded/0,4_0_4.tmx"/>
+ <cell x="1" y="4" map="worlded/1,4_1_4.tmx"/>
+ <cell x="2" y="4" map="worlded/2,4_2_4.tmx"/>
+ <cell x="3" y="4" map="worlded/3,4_3_4.tmx"/>
+ <cell x="4" y="4" map="worlded/4,4_4_4.tmx"/>
+ <cell x="5" y="4" map="worlded/5,4_5_4.tmx"/>
+ <cell x="6" y="4" map="worlded/6,4_6_4.tmx"/>
+ <cell x="10" y="4" map="worlded/10,4_10_4.tmx"/>
+ <cell x="12" y="4" map="worlded/12,4_12_4.tmx"/>
+ <cell x="13" y="4" map="worlded/13,4_13_4.tmx"/>
+ <cell x="14" y="4" map="worlded/14,4_14_4.tmx"/>
+ <cell x="15" y="4" map="worlded/15,4_15_4.tmx"/>
+ <cell x="16" y="4" map="worlded/16,4_16_4.tmx"/>
+ <cell x="17" y="4" map="worlded/17,4_17_4.tmx"/>
+ <cell x="18" y="4" map="worlded/18,4_18_4.tmx"/>
+ <cell x="0" y="5" map="worlded/0,5_0_5.tmx"/>
+ <cell x="1" y="5" map="worlded/1,5_1_5.tmx"/>
+ <cell x="3" y="5" map="worlded/3,5_3_5.tmx"/>
+ <cell x="4" y="5" map="worlded/4,5_4_5.tmx"/>
+ <cell x="5" y="5" map="worlded/5,5_5_5.tmx"/>
+ <cell x="6" y="5" map="worlded/6,5_6_5.tmx"/>
+ <cell x="10" y="5" map="worlded/10,5_10_5.tmx"/>
+ <cell x="12" y="5" map="worlded/12,5_12_5.tmx"/>
+ <cell x="13" y="5" map="worlded/13,5_13_5.tmx"/>
+ <cell x="14" y="5" map="worlded/14,5_14_5.tmx"/>
+ <cell x="15" y="5" map="worlded/15,5_15_5.tmx"/>
+ <cell x="16" y="5" map="worlded/16,5_16_5.tmx"/>
+ <cell x="17" y="5" map="worlded/17,5_17_5.tmx"/>
+ <cell x="18" y="5" map="worlded/18,5_18_5.tmx"/>
+ <cell x="0" y="6" map="worlded/0,6_0_6.tmx"/>
+ <cell x="1" y="6" map="worlded/1,6_1_6.tmx"/>
+ <cell x="4" y="6" map="worlded/4,6_4_6.tmx"/>
+ <cell x="5" y="6" map="worlded/5,6_5_6.tmx"/>
+ <cell x="6" y="6" map="worlded/6,6_6_6.tmx"/>
+ <cell x="10" y="6" map="worlded/10,6_10_6.tmx"/>
+ <cell x="12" y="6" map="worlded/12,6_12_6.tmx"/>
+ <cell x="13" y="6" map="worlded/13,6_13_6.tmx"/>
+ <cell x="14" y="6" map="worlded/14,6_14_6.tmx"/>
+ <cell x="15" y="6" map="worlded/15,6_15_6.tmx"/>
+ <cell x="16" y="6" map="worlded/16,6_16_6.tmx"/>
+ <cell x="17" y="6" map="worlded/17,6_17_6.tmx"/>
+ <cell x="0" y="7" map="worlded/0,7_0_7.tmx"/>
+ <cell x="1" y="7" map="worlded/1,7_1_7.tmx"/>
+ <cell x="5" y="7" map="worlded/5,7_5_7.tmx"/>
+ <cell x="6" y="7" map="worlded/6,7_6_7.tmx"/>
+ <cell x="10" y="7" map="worlded/10,7_10_7.tmx"/>
+ <cell x="13" y="7" map="worlded/13,7_13_7.tmx"/>
+ <cell x="14" y="7" map="worlded/14,7_14_7.tmx"/>
+ <cell x="15" y="7" map="worlded/15,7_15_7.tmx"/>
+ <cell x="16" y="7" map="worlded/16,7_16_7.tmx"/>
+ <cell x="17" y="7" map="worlded/17,7_17_7.tmx"/>
+ <cell x="0" y="8" map="worlded/0,8_0_8.tmx"/>
+ <cell x="1" y="8" map="worlded/1,8_1_8.tmx"/>
+ <cell x="6" y="8" map="worlded/6,8_6_8.tmx"/>
+ <cell x="13" y="8" map="worlded/13,8_13_8.tmx"/>
+ <cell x="14" y="8" map="worlded/14,8_14_8.tmx"/>
+ <cell x="15" y="8" map="worlded/15,8_15_8.tmx"/>
+ <cell x="16" y="8" map="worlded/16,8_16_8.tmx"/>
+ <cell x="17" y="8" map="worlded/17,8_17_8.tmx"/>
+ <cell x="0" y="9" map="worlded/0,9_0_9.tmx"/>
+ <cell x="1" y="9" map="worlded/1,9_1_9.tmx"/>
+ <cell x="6" y="9" map="worlded/6,9_6_9.tmx"/>
+ <cell x="14" y="9" map="worlded/14,9_14_9.tmx"/>
+ <cell x="15" y="9" map="worlded/15,9_15_9.tmx"/>
+ <cell x="16" y="9" map="worlded/16,9_16_9.tmx"/>
+ <cell x="17" y="9" map="worlded/17,9_17_9.tmx"/>
+ <cell x="1" y="10" map="worlded/1,10_1_10.tmx"/>
+ <cell x="15" y="10" map="worlded/15,10_15_10.tmx"/>
+ <cell x="16" y="10" map="worlded/16,10_16_10.tmx"/>
+ <cell x="17" y="10" map="worlded/17,10_17_10.tmx"/>
+ <cell x="1" y="11" map="worlded/1,11_1_11.tmx"/>
+ <cell x="16" y="11" map="worlded/16,11_16_11.tmx"/>
+ <cell x="17" y="11" map="worlded/17,11_17_11.tmx"/>
+ <cell x="18" y="11" map="worlded/18,11_18_11.tmx"/>
+ <cell x="17" y="12" map="worlded/17,12_17_12.tmx"/>
+ <cell x="18" y="12" map="worlded/18,12_18_12.tmx"/>
+ <cell x="19" y="12" map="worlded/19,12_19_12.tmx"/>
+ <cell x="17" y="13" map="worlded/17,13_17_13.tmx"/>
+ <cell x="18" y="13" map="worlded/18,13_18_13.tmx"/>
+ <cell x="19" y="13" map="worlded/19,13_19_13.tmx"/>
+ <cell x="17" y="14" map="worlded/17,14_17_14.tmx"/>
+ <cell x="18" y="14" map="worlded/18,14_18_14.tmx"/>
+ <cell x="19" y="14" map="worlded/19,14_19_14.tmx"/>
+ <cell x="17" y="15" map="worlded/17,15_17_15.tmx"/>
+ <cell x="18" y="15" map="worlded/18,15_18_15.tmx"/>
+ <cell x="19" y="15" map="worlded/19,15_19_15.tmx"/>
+ <cell x="17" y="16" map="worlded/17,16_17_16.tmx"/>
+ <cell x="18" y="16" map="worlded/18,16_18_16.tmx"/>
+ <cell x="19" y="16" map="worlded/19,16_19_16.tmx"/>
+ <cell x="17" y="17" map="worlded/17,17_17_17.tmx"/>
+ <cell x="18" y="17" map="worlded/18,17_18_17.tmx"/>
+ <cell x="19" y="17" map="worlded/19,17_19_17.tmx"/>
+ <cell x="17" y="18" map="worlded/17,18_17_18.tmx"/>
+ <cell x="18" y="18" map="worlded/18,18_18_18.tmx"/>
+ <cell x="19" y="18" map="worlded/19,18_19_18.tmx"/>
+ <cell x="17" y="19" map="worlded/17,19_17_19.tmx"/>
+ <cell x="18" y="19" map="worlded/18,19_18_19.tmx"/>
+ <cell x="19" y="19" map="worlded/19,19_19_19.tmx"/>
+ <cell x="19" y="20" map="worlded/19,20_19_20.tmx"/>
+</world>
