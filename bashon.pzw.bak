@@ -9,7 +9,7 @@
   <warn-unknown-colors checked="true"/>
   <compress checked="true"/>
   <copy-pixels checked="true"/>
-  <update-existing checked="true"/>
+  <update-existing checked="false"/>
  </BMPToTMX>
  <TMXToBMP>
   <mainImage generate="true"/>
