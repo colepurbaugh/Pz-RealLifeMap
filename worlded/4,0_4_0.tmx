@@ -159,676 +159,676 @@
  <tileset firstgid="4069" name="electricity_pylon" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/electricity_pylon.png" width="512" height="2944"/>
  </tileset>
- <tileset firstgid="4437" name="f_bushes_1" tilewidth="64" tileheight="128">
+ <tileset firstgid="4253" name="f_bushes_1" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/f_bushes_1.png" width="1024" height="1024"/>
  </tileset>
- <tileset firstgid="4565" name="f_bushes_2" tilewidth="64" tileheight="128">
+ <tileset firstgid="4381" name="f_bushes_2" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/f_bushes_2.png" width="640" height="1024"/>
  </tileset>
- <tileset firstgid="4645" name="f_flowerbed_1" tilewidth="64" tileheight="128">
+ <tileset firstgid="4461" name="f_flowerbed_1" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/f_flowerbed_1.png" width="768" height="512"/>
  </tileset>
- <tileset firstgid="4693" name="f_wallvines_1" tilewidth="64" tileheight="128">
+ <tileset firstgid="4509" name="f_wallvines_1" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/f_wallvines_1.png" width="384" height="1536"/>
  </tileset>
- <tileset firstgid="4765" name="fencing_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="4581" name="fencing_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/fencing_01.png" width="512" height="2048"/>
  </tileset>
- <tileset firstgid="4893" name="fencing_burnt_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="4709" name="fencing_burnt_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/fencing_burnt_01.png" width="512" height="2048"/>
  </tileset>
- <tileset firstgid="5021" name="fencing_damaged_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="4837" name="fencing_damaged_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/fencing_damaged_01.png" width="512" height="3072"/>
  </tileset>
- <tileset firstgid="5213" name="fencing_damaged_02" tilewidth="64" tileheight="128">
+ <tileset firstgid="5029" name="fencing_damaged_02" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/fencing_damaged_02.png" width="512" height="3072"/>
  </tileset>
- <tileset firstgid="5405" name="fixtures_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="5221" name="fixtures_01" tilewidth="64" tileheight="128">
   <image source="overlays/fixtures_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="5469" name="fixtures_bathroom_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="5285" name="fixtures_bathroom_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/fixtures_bathroom_01.png" width="512" height="1280"/>
  </tileset>
- <tileset firstgid="5549" name="fixtures_bathroom_02" tilewidth="64" tileheight="128">
+ <tileset firstgid="5365" name="fixtures_bathroom_02" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/fixtures_bathroom_02.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="5613" name="fixtures_counters_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="5429" name="fixtures_counters_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/fixtures_counters_01.png" width="512" height="2048"/>
  </tileset>
- <tileset firstgid="5741" name="fixtures_doors_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="5557" name="fixtures_doors_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/fixtures_doors_01.png" width="512" height="2048"/>
  </tileset>
- <tileset firstgid="5869" name="fixtures_doors_02" tilewidth="64" tileheight="128">
+ <tileset firstgid="5685" name="fixtures_doors_02" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/fixtures_doors_02.png" width="512" height="2048"/>
  </tileset>
- <tileset firstgid="5997" name="fixtures_doors_fences_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="5813" name="fixtures_doors_fences_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/fixtures_doors_fences_01.png" width="512" height="1920"/>
  </tileset>
- <tileset firstgid="6117" name="fixtures_doors_frames_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="5933" name="fixtures_doors_frames_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/fixtures_doors_frames_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="6181" name="fixtures_escalators_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="5997" name="fixtures_escalators_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/fixtures_escalators_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="6245" name="fixtures_fireplaces_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="6061" name="fixtures_fireplaces_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/fixtures_fireplaces_01.png" width="512" height="1280"/>
  </tileset>
- <tileset firstgid="6325" name="fixtures_overlay_counters_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="6141" name="fixtures_overlay_counters_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/fixtures_overlay_counters_01.png" width="512" height="2048"/>
  </tileset>
- <tileset firstgid="6453" name="fixtures_railings_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="6269" name="fixtures_railings_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/fixtures_railings_01.png" width="512" height="2304"/>
  </tileset>
- <tileset firstgid="6597" name="fixtures_sinks_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="6413" name="fixtures_sinks_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/fixtures_sinks_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="6661" name="fixtures_stairs_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="6477" name="fixtures_stairs_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/fixtures_stairs_01.png" width="512" height="2048"/>
  </tileset>
- <tileset firstgid="6789" name="fixtures_windows_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="6605" name="fixtures_windows_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/fixtures_windows_01.png" width="512" height="1280"/>
  </tileset>
- <tileset firstgid="6869" name="fixtures_windows_curtains_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="6685" name="fixtures_windows_curtains_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/fixtures_windows_curtains_01.png" width="512" height="2048"/>
  </tileset>
- <tileset firstgid="6997" name="fixtures_windows_curtains_02" tilewidth="64" tileheight="128">
+ <tileset firstgid="6813" name="fixtures_windows_curtains_02" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/fixtures_windows_curtains_02.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="7061" name="fixtures_windows_detailing_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="6877" name="fixtures_windows_detailing_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/fixtures_windows_detailing_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="7125" name="fixtures_windows_detailing_02" tilewidth="64" tileheight="128">
+ <tileset firstgid="6941" name="fixtures_windows_detailing_02" tilewidth="64" tileheight="128">
   <image source="fixtures_windows_detailing_02.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="7189" name="floors_burnt_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="7005" name="floors_burnt_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/floors_burnt_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="7253" name="floors_exterior_natural_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="7069" name="floors_exterior_natural_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/floors_exterior_natural_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="7317" name="floors_exterior_street_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="7133" name="floors_exterior_street_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/floors_exterior_street_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="7381" name="floors_exterior_tilesandstone_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="7197" name="floors_exterior_tilesandstone_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/floors_exterior_tilesandstone_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="7445" name="floors_interior_carpet_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="7261" name="floors_interior_carpet_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/floors_interior_carpet_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="7509" name="floors_interior_tilesandwood_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="7325" name="floors_interior_tilesandwood_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/floors_interior_tilesandwood_01.png" width="512" height="2048"/>
  </tileset>
- <tileset firstgid="7637" name="floors_overlay_street_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="7453" name="floors_overlay_street_01" tilewidth="64" tileheight="128">
   <image source="overlays/floors_overlay_street_01.png" width="512" height="1152"/>
  </tileset>
- <tileset firstgid="7709" name="floors_overlay_tiles_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="7525" name="floors_overlay_tiles_01" tilewidth="64" tileheight="128">
   <image source="overlays/floors_overlay_tiles_01.png" width="512" height="1152"/>
  </tileset>
- <tileset firstgid="7781" name="floors_overlay_tiles_02" tilewidth="64" tileheight="128">
+ <tileset firstgid="7597" name="floors_overlay_tiles_02" tilewidth="64" tileheight="128">
   <image source="overlays/floors_overlay_tiles_02.png" width="512" height="1152"/>
  </tileset>
- <tileset firstgid="7853" name="floors_overlay_wood_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="7669" name="floors_overlay_wood_01" tilewidth="64" tileheight="128">
   <image source="overlays/floors_overlay_wood_01.png" width="512" height="1152"/>
  </tileset>
- <tileset firstgid="7925" name="floors_rugs_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="7741" name="floors_rugs_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/floors_rugs_01.png" width="512" height="2048"/>
  </tileset>
- <tileset firstgid="8053" name="food_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="7869" name="food_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/food_01.png" width="512" height="2048"/>
  </tileset>
- <tileset firstgid="8181" name="food_02" tilewidth="64" tileheight="128">
+ <tileset firstgid="7997" name="food_02" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/food_02.png" width="512" height="2048"/>
  </tileset>
- <tileset firstgid="8309" name="foraging_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="8125" name="foraging_01" tilewidth="64" tileheight="128">
   <image source="foraging_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="8373" name="furniture_bedding_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="8189" name="furniture_bedding_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/furniture_bedding_01.png" width="512" height="2048"/>
  </tileset>
- <tileset firstgid="8501" name="furniture_seating_indoor_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="8317" name="furniture_seating_indoor_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/furniture_seating_indoor_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="8565" name="furniture_seating_indoor_02" tilewidth="64" tileheight="128">
+ <tileset firstgid="8381" name="furniture_seating_indoor_02" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/furniture_seating_indoor_02.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="8629" name="furniture_seating_indoor_03" tilewidth="64" tileheight="128">
+ <tileset firstgid="8445" name="furniture_seating_indoor_03" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/furniture_seating_indoor_03.png" width="512" height="1280"/>
  </tileset>
- <tileset firstgid="8709" name="furniture_seating_outdoor_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="8525" name="furniture_seating_outdoor_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/furniture_seating_outdoor_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="8773" name="furniture_shelving_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="8589" name="furniture_shelving_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/furniture_shelving_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="8837" name="furniture_storage_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="8653" name="furniture_storage_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/furniture_storage_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="8901" name="furniture_storage_02" tilewidth="64" tileheight="128">
+ <tileset firstgid="8717" name="furniture_storage_02" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/furniture_storage_02.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="8965" name="furniture_tables_high_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="8781" name="furniture_tables_high_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/furniture_tables_high_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="9029" name="furniture_tables_low_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="8845" name="furniture_tables_low_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/furniture_tables_low_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="9093" name="industry_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="8909" name="industry_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/industry_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="9157" name="industry_02" tilewidth="64" tileheight="128">
+ <tileset firstgid="8973" name="industry_02" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/industry_02.png" width="512" height="4096"/>
  </tileset>
- <tileset firstgid="9413" name="industry_bunker_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="9229" name="industry_bunker_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/industry_bunker_01.png" width="512" height="1280"/>
  </tileset>
- <tileset firstgid="9493" name="industry_railroad_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="9309" name="industry_railroad_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/industry_railroad_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="9557" name="industry_railroad_02" tilewidth="64" tileheight="128">
+ <tileset firstgid="9373" name="industry_railroad_02" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/industry_railroad_02.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="9621" name="industry_railroad_03" tilewidth="64" tileheight="128">
+ <tileset firstgid="9437" name="industry_railroad_03" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/industry_railroad_03.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="9685" name="industry_railroad_04" tilewidth="64" tileheight="128">
+ <tileset firstgid="9501" name="industry_railroad_04" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/industry_railroad_04.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="9749" name="industry_railroad_05" tilewidth="64" tileheight="128">
+ <tileset firstgid="9565" name="industry_railroad_05" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/industry_railroad_05.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="9813" name="industry_trucks_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="9629" name="industry_trucks_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/industry_trucks_01.png" width="512" height="1280"/>
  </tileset>
- <tileset firstgid="9893" name="industry_trucks_02" tilewidth="64" tileheight="128">
+ <tileset firstgid="9709" name="industry_trucks_02" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/industry_trucks_02.png" width="512" height="1280"/>
  </tileset>
- <tileset firstgid="9973" name="invisible_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="9789" name="invisible_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/invisible_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="10037" name="lighting_indoor_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="9853" name="lighting_indoor_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/lighting_indoor_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="10101" name="lighting_outdoor_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="9917" name="lighting_outdoor_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/lighting_outdoor_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="10165" name="location_barn_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="9981" name="location_barn_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/location_barn_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="10229" name="location_business_bank_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="10045" name="location_business_bank_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/location_business_bank_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="10293" name="location_business_distillery_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="10109" name="location_business_distillery_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/location_business_distillery_01.png" width="512" height="2048"/>
  </tileset>
- <tileset firstgid="10421" name="location_business_machinery_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="10237" name="location_business_machinery_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/location_business_machinery_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="10485" name="location_business_office_generic_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="10301" name="location_business_office_generic_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/location_business_office_generic_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="10549" name="location_community_cemetary_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="10365" name="location_community_cemetary_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/location_community_cemetary_01.png" width="512" height="1280"/>
  </tileset>
- <tileset firstgid="10629" name="location_community_church_small_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="10445" name="location_community_church_small_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/location_community_church_small_01.png" width="512" height="2048"/>
  </tileset>
- <tileset firstgid="10757" name="location_community_church_small_02" tilewidth="64" tileheight="128">
+ <tileset firstgid="10573" name="location_community_church_small_02" tilewidth="64" tileheight="128">
   <image source="location_community_church_small_02.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="10821" name="location_community_medical_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="10637" name="location_community_medical_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/location_community_medical_01.png" width="512" height="2048"/>
  </tileset>
- <tileset firstgid="10949" name="location_community_park_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="10765" name="location_community_park_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/location_community_park_01.png" width="512" height="1280"/>
  </tileset>
- <tileset firstgid="11029" name="location_community_police_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="10845" name="location_community_police_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/location_community_police_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="11093" name="location_community_school_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="10909" name="location_community_school_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/location_community_school_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="11157" name="location_entertainment_gallery_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="10973" name="location_entertainment_gallery_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/location_entertainment_gallery_01.png" width="512" height="2048"/>
  </tileset>
- <tileset firstgid="11285" name="location_entertainment_gallery_02" tilewidth="64" tileheight="128">
+ <tileset firstgid="11101" name="location_entertainment_gallery_02" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/location_entertainment_gallery_02.png" width="512" height="2048"/>
  </tileset>
- <tileset firstgid="11413" name="location_entertainment_theatre_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="11229" name="location_entertainment_theatre_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/location_entertainment_theatre_01.png" width="512" height="4096"/>
  </tileset>
- <tileset firstgid="11669" name="location_farm_accesories_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="11485" name="location_farm_accesories_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/location_farm_accesories_01.png" width="512" height="1280"/>
  </tileset>
- <tileset firstgid="11749" name="location_hospitality_sunstarmotel_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="11565" name="location_hospitality_sunstarmotel_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/location_hospitality_sunstarmotel_01.png" width="512" height="1152"/>
  </tileset>
- <tileset firstgid="11821" name="location_hospitality_sunstarmotel_02" tilewidth="64" tileheight="128">
+ <tileset firstgid="11637" name="location_hospitality_sunstarmotel_02" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/location_hospitality_sunstarmotel_02.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="11885" name="location_military_generic_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="11701" name="location_military_generic_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/location_military_generic_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="11949" name="location_military_knox_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="11765" name="location_military_knox_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/location_military_knox_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="12013" name="location_military_tent_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="11829" name="location_military_tent_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/location_military_tent_01.png" width="512" height="2048"/>
  </tileset>
- <tileset firstgid="12141" name="location_restaurant_bar_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="11957" name="location_restaurant_bar_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/location_restaurant_bar_01.png" width="512" height="1536"/>
  </tileset>
- <tileset firstgid="12237" name="location_restaurant_diner_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="12053" name="location_restaurant_diner_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/location_restaurant_diner_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="12301" name="location_restaurant_generic_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="12117" name="location_restaurant_generic_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/location_restaurant_generic_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="12365" name="location_restaurant_pie_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="12181" name="location_restaurant_pie_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/location_restaurant_pie_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="12429" name="location_restaurant_pileocrepe_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="12245" name="location_restaurant_pileocrepe_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/location_restaurant_pileocrepe_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="12493" name="location_restaurant_pizzawhirled_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="12309" name="location_restaurant_pizzawhirled_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/location_restaurant_pizzawhirled_01.png" width="512" height="2048"/>
  </tileset>
- <tileset firstgid="12621" name="location_restaurant_seahorse_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="12437" name="location_restaurant_seahorse_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/location_restaurant_seahorse_01.png" width="512" height="2048"/>
  </tileset>
- <tileset firstgid="12749" name="location_restaurant_spiffos_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="12565" name="location_restaurant_spiffos_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/location_restaurant_spiffos_01.png" width="512" height="1280"/>
  </tileset>
- <tileset firstgid="12829" name="location_restaurant_spiffos_02" tilewidth="64" tileheight="128">
+ <tileset firstgid="12645" name="location_restaurant_spiffos_02" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/location_restaurant_spiffos_02.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="12893" name="location_restaurant_spiffos_03" tilewidth="64" tileheight="128">
+ <tileset firstgid="12709" name="location_restaurant_spiffos_03" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/location_restaurant_spiffos_03.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="12957" name="location_services_beauty_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="12773" name="location_services_beauty_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/location_services_beauty_01.png" width="512" height="1280"/>
  </tileset>
- <tileset firstgid="13037" name="location_sewer_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="12853" name="location_sewer_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/location_sewer_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="13101" name="location_shop_accessories_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="12917" name="location_shop_accessories_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/location_shop_accessories_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="13165" name="location_shop_accessories_genericsigns_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="12981" name="location_shop_accessories_genericsigns_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/location_shop_accessories_genericsigns_01.png" width="512" height="2048"/>
  </tileset>
- <tileset firstgid="13293" name="location_shop_bargNclothes_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="13109" name="location_shop_bargNclothes_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/location_shop_bargNclothes_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="13357" name="location_shop_fossoil_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="13173" name="location_shop_fossoil_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/location_shop_fossoil_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="13421" name="location_shop_gas2go_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="13237" name="location_shop_gas2go_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/location_shop_gas2go_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="13485" name="location_shop_generic_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="13301" name="location_shop_generic_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/location_shop_generic_01.png" width="512" height="2048"/>
  </tileset>
- <tileset firstgid="13613" name="location_shop_greenes_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="13429" name="location_shop_greenes_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/location_shop_greenes_01.png" width="512" height="1280"/>
  </tileset>
- <tileset firstgid="13693" name="location_shop_mall_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="13509" name="location_shop_mall_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/location_shop_mall_01.png" width="512" height="2048"/>
  </tileset>
- <tileset firstgid="13821" name="location_shop_mall_signs_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="13637" name="location_shop_mall_signs_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/location_shop_mall_signs_01.png" width="512" height="2304"/>
  </tileset>
- <tileset firstgid="13965" name="location_shop_mall_signs_02" tilewidth="64" tileheight="128">
+ <tileset firstgid="13781" name="location_shop_mall_signs_02" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/location_shop_mall_signs_02.png" width="512" height="2304"/>
  </tileset>
- <tileset firstgid="14109" name="location_shop_zippee_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="13925" name="location_shop_zippee_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/location_shop_zippee_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="14173" name="location_trailer_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="13989" name="location_trailer_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/location_trailer_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="14237" name="location_trailer_02" tilewidth="64" tileheight="128">
+ <tileset firstgid="14053" name="location_trailer_02" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/location_trailer_02.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="14301" name="missing_tileset_666" tilewidth="64" tileheight="128">
+ <tileset firstgid="14117" name="missing_tileset_666" tilewidth="64" tileheight="128">
   <image source="missing_tileset_666.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="14365" name="office_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="14181" name="office_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/office_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="14429" name="overlay_blood_fence_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="14245" name="overlay_blood_fence_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/overlay_blood_fence_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="14493" name="overlay_blood_floor_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="14309" name="overlay_blood_floor_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/overlay_blood_floor_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="14557" name="overlay_blood_wall_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="14373" name="overlay_blood_wall_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/overlay_blood_wall_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="14621" name="overlay_graffiti_wall_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="14437" name="overlay_graffiti_wall_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/overlay_graffiti_wall_01.png" width="512" height="2048"/>
  </tileset>
- <tileset firstgid="14749" name="overlay_grime_floor_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="14565" name="overlay_grime_floor_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/overlay_grime_floor_01.png" width="512" height="1536"/>
  </tileset>
- <tileset firstgid="14845" name="overlay_grime_wall_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="14661" name="overlay_grime_wall_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/overlay_grime_wall_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="14909" name="overlay_messages_wall_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="14725" name="overlay_messages_wall_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/overlay_messages_wall_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="14973" name="papernotices_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="14789" name="papernotices_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/papernotices_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="15037" name="radio_tower" tilewidth="64" tileheight="128">
+ <tileset firstgid="14853" name="radio_tower" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/radio_tower.png" width="512" height="2048"/>
  </tileset>
- <tileset firstgid="15293" name="recreational_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="14981" name="recreational_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/recreational_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="15357" name="recreational_sports_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="15045" name="recreational_sports_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/recreational_sports_01.png" width="512" height="4096"/>
  </tileset>
- <tileset firstgid="15613" name="roofs_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="15301" name="roofs_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/roofs_01.png" width="512" height="1920"/>
  </tileset>
- <tileset firstgid="15733" name="roofs_02" tilewidth="64" tileheight="128">
+ <tileset firstgid="15421" name="roofs_02" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/roofs_02.png" width="512" height="1920"/>
  </tileset>
- <tileset firstgid="15853" name="roofs_03" tilewidth="64" tileheight="128">
+ <tileset firstgid="15541" name="roofs_03" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/roofs_03.png" width="512" height="2048"/>
  </tileset>
- <tileset firstgid="15981" name="roofs_04" tilewidth="64" tileheight="128">
+ <tileset firstgid="15669" name="roofs_04" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/roofs_04.png" width="512" height="1920"/>
  </tileset>
- <tileset firstgid="16101" name="roofs_05" tilewidth="64" tileheight="128">
+ <tileset firstgid="15789" name="roofs_05" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/roofs_05.png" width="512" height="2944"/>
  </tileset>
- <tileset firstgid="16285" name="roofs_accents_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="15973" name="roofs_accents_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/roofs_accents_01.png" width="512" height="1280"/>
  </tileset>
- <tileset firstgid="16365" name="roofs_burnt_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="16053" name="roofs_burnt_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/roofs_burnt_01.png" width="512" height="1920"/>
  </tileset>
- <tileset firstgid="16485" name="seating_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="16173" name="seating_01" tilewidth="64" tileheight="128">
   <image source="overlays/seating_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="16549" name="security_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="16237" name="security_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/security_01.png" width="512" height="1280"/>
  </tileset>
- <tileset firstgid="16629" name="signs_miscbrands_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="16317" name="signs_miscbrands_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/signs_miscbrands_01.png" width="512" height="2048"/>
  </tileset>
- <tileset firstgid="16757" name="signs_one-off_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="16445" name="signs_one-off_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/signs_one-off_01.png" width="512" height="2048"/>
  </tileset>
- <tileset firstgid="16885" name="signs_one-off_02" tilewidth="64" tileheight="128">
+ <tileset firstgid="16573" name="signs_one-off_02" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/signs_one-off_02.png" width="512" height="8192"/>
  </tileset>
- <tileset firstgid="17397" name="signs_one-off_03" tilewidth="64" tileheight="128">
+ <tileset firstgid="17085" name="signs_one-off_03" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/signs_one-off_03.png" width="512" height="8192"/>
  </tileset>
- <tileset firstgid="17909" name="signs_one-off_04" tilewidth="64" tileheight="128">
+ <tileset firstgid="17597" name="signs_one-off_04" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/signs_one-off_04.png" width="512" height="8192"/>
  </tileset>
- <tileset firstgid="18421" name="signs_one-off_05" tilewidth="64" tileheight="128">
+ <tileset firstgid="18109" name="signs_one-off_05" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/signs_one-off_05.png" width="512" height="12288"/>
  </tileset>
- <tileset firstgid="19189" name="stashes_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="18877" name="stashes_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/stashes_01.png" width="512" height="2048"/>
  </tileset>
- <tileset firstgid="19317" name="storage_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="19005" name="storage_01" tilewidth="64" tileheight="128">
   <image source="overlays/storage_01.png" width="512" height="1280"/>
  </tileset>
- <tileset firstgid="19397" name="street_curbs_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="19085" name="street_curbs_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/street_curbs_01.png" width="512" height="1280"/>
  </tileset>
- <tileset firstgid="19477" name="street_curbs_01_blend_dark_grass" tilewidth="64" tileheight="128">
+ <tileset firstgid="19165" name="street_curbs_01_blend_dark_grass" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/street_curbs_01_blend_dark_grass.png" width="512" height="1408"/>
  </tileset>
- <tileset firstgid="19565" name="street_curbs_01_blend_dirt" tilewidth="64" tileheight="128">
+ <tileset firstgid="19253" name="street_curbs_01_blend_dirt" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/street_curbs_01_blend_dirt.png" width="512" height="1408"/>
  </tileset>
- <tileset firstgid="19653" name="street_curbs_01_blend_gravel" tilewidth="64" tileheight="128">
+ <tileset firstgid="19341" name="street_curbs_01_blend_gravel" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/street_curbs_01_blend_gravel.png" width="512" height="1408"/>
  </tileset>
- <tileset firstgid="19741" name="street_curbs_01_blend_light_grass" tilewidth="64" tileheight="128">
+ <tileset firstgid="19429" name="street_curbs_01_blend_light_grass" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/street_curbs_01_blend_light_grass.png" width="512" height="1408"/>
  </tileset>
- <tileset firstgid="19829" name="street_curbs_01_blend_medium_grass" tilewidth="64" tileheight="128">
+ <tileset firstgid="19517" name="street_curbs_01_blend_medium_grass" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/street_curbs_01_blend_medium_grass.png" width="512" height="1408"/>
  </tileset>
- <tileset firstgid="19917" name="street_curbs_01_blend_sand" tilewidth="64" tileheight="128">
+ <tileset firstgid="19605" name="street_curbs_01_blend_sand" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/street_curbs_01_blend_sand.png" width="512" height="1408"/>
  </tileset>
- <tileset firstgid="20005" name="street_curbs_01_blend_street" tilewidth="64" tileheight="128">
+ <tileset firstgid="19693" name="street_curbs_01_blend_street" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/street_curbs_01_blend_street.png" width="512" height="1408"/>
  </tileset>
- <tileset firstgid="20093" name="street_curbs_01_diag" tilewidth="64" tileheight="128">
+ <tileset firstgid="19781" name="street_curbs_01_diag" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/street_curbs_01_diag.png" width="512" height="1280"/>
  </tileset>
- <tileset firstgid="20173" name="street_curbs_01_diag_2" tilewidth="64" tileheight="128">
+ <tileset firstgid="19861" name="street_curbs_01_diag_2" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/street_curbs_01_diag_2.png" width="512" height="1280"/>
  </tileset>
- <tileset firstgid="20253" name="street_decoration_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="19941" name="street_decoration_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/street_decoration_01.png" width="512" height="2048"/>
  </tileset>
- <tileset firstgid="20381" name="street_roadsigns_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="20069" name="street_roadsigns_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/street_roadsigns_01.png" width="512" height="1280"/>
  </tileset>
- <tileset firstgid="20461" name="street_trafficlines_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="20149" name="street_trafficlines_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/street_trafficlines_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="20525" name="street_trafficlines_curb_white_faded" tilewidth="64" tileheight="128">
+ <tileset firstgid="20213" name="street_trafficlines_curb_white_faded" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/street_trafficlines_curb_white_faded.png" width="512" height="2560"/>
  </tileset>
- <tileset firstgid="20685" name="street_trafficlines_curb_white_full" tilewidth="64" tileheight="128">
+ <tileset firstgid="20373" name="street_trafficlines_curb_white_full" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/street_trafficlines_curb_white_full.png" width="512" height="2560"/>
  </tileset>
- <tileset firstgid="20845" name="street_trafficlines_curb_yellow_faded" tilewidth="64" tileheight="128">
+ <tileset firstgid="20533" name="street_trafficlines_curb_yellow_faded" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/street_trafficlines_curb_yellow_faded.png" width="512" height="2560"/>
  </tileset>
- <tileset firstgid="21005" name="street_trafficlines_curb_yellow_full" tilewidth="64" tileheight="128">
+ <tileset firstgid="20693" name="street_trafficlines_curb_yellow_full" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/street_trafficlines_curb_yellow_full.png" width="512" height="2560"/>
  </tileset>
- <tileset firstgid="21165" name="trash&amp;junk_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="20853" name="trash&amp;junk_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/trash&amp;junk_01.png" width="512" height="1280"/>
  </tileset>
- <tileset firstgid="21245" name="trash_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="20933" name="trash_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/trash_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="21309" name="trash_walls_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="20997" name="trash_walls_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/trash_walls_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="21373" name="trashcontainers_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="21061" name="trashcontainers_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/trashcontainers_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="21437" name="vegetation_farm_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="21125" name="vegetation_farm_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/vegetation_farm_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="21501" name="vegetation_farming_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="21189" name="vegetation_farming_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/vegetation_farming_01.png" width="512" height="1280"/>
  </tileset>
- <tileset firstgid="21581" name="vegetation_foliage_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="21269" name="vegetation_foliage_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/vegetation_foliage_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="21645" name="vegetation_groundcover_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="21333" name="vegetation_groundcover_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/vegetation_groundcover_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="21709" name="vegetation_indoor_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="21397" name="vegetation_indoor_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/vegetation_indoor_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="21773" name="vegetation_ornamental_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="21461" name="vegetation_ornamental_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/vegetation_ornamental_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="21837" name="vegetation_trees_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="21525" name="vegetation_trees_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/vegetation_trees_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="21901" name="vegetation_wall_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="21589" name="vegetation_wall_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/vegetation_wall_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="21965" name="walls_burnt_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="21653" name="walls_burnt_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/walls_burnt_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="22029" name="walls_burnt_roofs_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="21717" name="walls_burnt_roofs_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/walls_burnt_roofs_01.png" width="512" height="1280"/>
  </tileset>
- <tileset firstgid="22109" name="walls_commercial_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="21797" name="walls_commercial_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/walls_commercial_01.png" width="512" height="2048"/>
  </tileset>
- <tileset firstgid="22237" name="walls_commercial_02" tilewidth="64" tileheight="128">
+ <tileset firstgid="21925" name="walls_commercial_02" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/walls_commercial_02.png" width="512" height="1280"/>
  </tileset>
- <tileset firstgid="22317" name="walls_commercial_03" tilewidth="64" tileheight="128">
+ <tileset firstgid="22005" name="walls_commercial_03" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/walls_commercial_03.png" width="512" height="1536"/>
  </tileset>
- <tileset firstgid="22413" name="walls_decoration_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="22101" name="walls_decoration_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/walls_decoration_01.png" width="512" height="2048"/>
  </tileset>
- <tileset firstgid="22541" name="walls_detailing_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="22229" name="walls_detailing_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/walls_detailing_01.png" width="512" height="2048"/>
  </tileset>
- <tileset firstgid="22669" name="walls_exterior_house_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="22357" name="walls_exterior_house_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/walls_exterior_house_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="22733" name="walls_exterior_house_02" tilewidth="64" tileheight="128">
+ <tileset firstgid="22421" name="walls_exterior_house_02" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/walls_exterior_house_02.png" width="512" height="2048"/>
  </tileset>
- <tileset firstgid="22861" name="walls_exterior_roofs_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="22549" name="walls_exterior_roofs_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/walls_exterior_roofs_01.png" width="512" height="1280"/>
  </tileset>
- <tileset firstgid="22941" name="walls_exterior_roofs_02" tilewidth="64" tileheight="128">
+ <tileset firstgid="22629" name="walls_exterior_roofs_02" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/walls_exterior_roofs_02.png" width="512" height="1280"/>
  </tileset>
- <tileset firstgid="23021" name="walls_exterior_roofs_03" tilewidth="64" tileheight="128">
+ <tileset firstgid="22709" name="walls_exterior_roofs_03" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/walls_exterior_roofs_03.png" width="512" height="1280"/>
  </tileset>
- <tileset firstgid="23101" name="walls_exterior_roofs_04" tilewidth="64" tileheight="128">
+ <tileset firstgid="22789" name="walls_exterior_roofs_04" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/walls_exterior_roofs_04.png" width="512" height="1280"/>
  </tileset>
- <tileset firstgid="23181" name="walls_exterior_roofs_05" tilewidth="64" tileheight="128">
+ <tileset firstgid="22869" name="walls_exterior_roofs_05" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/walls_exterior_roofs_05.png" width="512" height="1280"/>
  </tileset>
- <tileset firstgid="23261" name="walls_exterior_roofs_06" tilewidth="64" tileheight="128">
+ <tileset firstgid="22949" name="walls_exterior_roofs_06" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/walls_exterior_roofs_06.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="23325" name="walls_exterior_roofs_07" tilewidth="64" tileheight="128">
+ <tileset firstgid="23013" name="walls_exterior_roofs_07" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/walls_exterior_roofs_07.png" width="512" height="1280"/>
  </tileset>
- <tileset firstgid="23405" name="walls_exterior_roofs_08" tilewidth="64" tileheight="128">
+ <tileset firstgid="23093" name="walls_exterior_roofs_08" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/walls_exterior_roofs_08.png" width="512" height="1280"/>
  </tileset>
- <tileset firstgid="23485" name="walls_exterior_roofs_09" tilewidth="64" tileheight="128">
+ <tileset firstgid="23173" name="walls_exterior_roofs_09" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/walls_exterior_roofs_09.png" width="512" height="2688"/>
  </tileset>
- <tileset firstgid="23653" name="walls_exterior_wooden_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="23341" name="walls_exterior_wooden_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/walls_exterior_wooden_01.png" width="512" height="1280"/>
  </tileset>
- <tileset firstgid="23733" name="walls_exterior_wooden_02" tilewidth="64" tileheight="128">
+ <tileset firstgid="23421" name="walls_exterior_wooden_02" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/walls_exterior_wooden_02.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="23797" name="walls_garage_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="23485" name="walls_garage_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/walls_garage_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="23861" name="walls_garage_02" tilewidth="64" tileheight="128">
+ <tileset firstgid="23549" name="walls_garage_02" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/walls_garage_02.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="23925" name="walls_house_blocks_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="23613" name="walls_house_blocks_01" tilewidth="64" tileheight="128">
   <image source="overlays/walls_house_blocks_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="23989" name="walls_house_blocks_01_MIRRORED" tilewidth="64" tileheight="128">
+ <tileset firstgid="23677" name="walls_house_blocks_01_MIRRORED" tilewidth="64" tileheight="128">
   <image source="overlays/walls_house_blocks_01_MIRRORED.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="24053" name="walls_house_blocks_LIGHT_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="23741" name="walls_house_blocks_LIGHT_01" tilewidth="64" tileheight="128">
   <image source="overlays/walls_house_blocks_LIGHT_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="24117" name="walls_house_blocks_LIGHT_01_MIRRORED" tilewidth="64" tileheight="128">
+ <tileset firstgid="23805" name="walls_house_blocks_LIGHT_01_MIRRORED" tilewidth="64" tileheight="128">
   <image source="overlays/walls_house_blocks_LIGHT_01_MIRRORED.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="24181" name="walls_house_brick_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="23869" name="walls_house_brick_01" tilewidth="64" tileheight="128">
   <image source="overlays/walls_house_brick_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="24245" name="walls_house_brick_01_MIRRORED" tilewidth="64" tileheight="128">
+ <tileset firstgid="23933" name="walls_house_brick_01_MIRRORED" tilewidth="64" tileheight="128">
   <image source="overlays/walls_house_brick_01_MIRRORED.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="24309" name="walls_house_brick_LIGHT_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="23997" name="walls_house_brick_LIGHT_01" tilewidth="64" tileheight="128">
   <image source="overlays/walls_house_brick_LIGHT_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="24373" name="walls_house_brick_LIGHT_01_MIRRORED" tilewidth="64" tileheight="128">
+ <tileset firstgid="24061" name="walls_house_brick_LIGHT_01_MIRRORED" tilewidth="64" tileheight="128">
   <image source="overlays/walls_house_brick_LIGHT_01_MIRRORED.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="24437" name="walls_house_clapboard_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="24125" name="walls_house_clapboard_01" tilewidth="64" tileheight="128">
   <image source="overlays/walls_house_clapboard_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="24501" name="walls_house_clapboard_01_MIRRORED" tilewidth="64" tileheight="128">
+ <tileset firstgid="24189" name="walls_house_clapboard_01_MIRRORED" tilewidth="64" tileheight="128">
   <image source="overlays/walls_house_clapboard_01_MIRRORED.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="24565" name="walls_house_clapboard_LIGHT_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="24253" name="walls_house_clapboard_LIGHT_01" tilewidth="64" tileheight="128">
   <image source="overlays/walls_house_clapboard_LIGHT_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="24629" name="walls_house_clapboard_LIGHT_01_MIRRORED" tilewidth="64" tileheight="128">
+ <tileset firstgid="24317" name="walls_house_clapboard_LIGHT_01_MIRRORED" tilewidth="64" tileheight="128">
   <image source="overlays/walls_house_clapboard_LIGHT_01_MIRRORED.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="24693" name="walls_house_flatstone_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="24381" name="walls_house_flatstone_01" tilewidth="64" tileheight="128">
   <image source="overlays/walls_house_flatstone_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="24757" name="walls_house_flatstone_01_MIRRORED" tilewidth="64" tileheight="128">
+ <tileset firstgid="24445" name="walls_house_flatstone_01_MIRRORED" tilewidth="64" tileheight="128">
   <image source="overlays/walls_house_flatstone_01_MIRRORED.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="24821" name="walls_house_smooth_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="24509" name="walls_house_smooth_01" tilewidth="64" tileheight="128">
   <image source="overlays/walls_house_smooth_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="24885" name="walls_house_smooth_01_MIRRORED" tilewidth="64" tileheight="128">
+ <tileset firstgid="24573" name="walls_house_smooth_01_MIRRORED" tilewidth="64" tileheight="128">
   <image source="overlays/walls_house_smooth_01_MIRRORED.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="24949" name="walls_house_stone_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="24637" name="walls_house_stone_01" tilewidth="64" tileheight="128">
   <image source="overlays/walls_house_stone_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="25013" name="walls_house_stone_01_MIRRORED" tilewidth="64" tileheight="128">
+ <tileset firstgid="24701" name="walls_house_stone_01_MIRRORED" tilewidth="64" tileheight="128">
   <image source="overlays/walls_house_stone_01_MIRRORED.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="25077" name="walls_house_trailer_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="24765" name="walls_house_trailer_01" tilewidth="64" tileheight="128">
   <image source="overlays/walls_house_trailer_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="25141" name="walls_house_trailer_01_MIRRORED" tilewidth="64" tileheight="128">
+ <tileset firstgid="24829" name="walls_house_trailer_01_MIRRORED" tilewidth="64" tileheight="128">
   <image source="overlays/walls_house_trailer_01_MIRRORED.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="25205" name="walls_house_wood_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="24893" name="walls_house_wood_01" tilewidth="64" tileheight="128">
   <image source="overlays/walls_house_wood_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="25269" name="walls_house_wood_01_MIRRORED" tilewidth="64" tileheight="128">
+ <tileset firstgid="24957" name="walls_house_wood_01_MIRRORED" tilewidth="64" tileheight="128">
   <image source="overlays/walls_house_wood_01_MIRRORED.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="25333" name="walls_interior_bathroom_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="25021" name="walls_interior_bathroom_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/walls_interior_bathroom_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="25397" name="walls_interior_cutaways_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="25085" name="walls_interior_cutaways_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/walls_interior_cutaways_01.png" width="512" height="2048"/>
  </tileset>
- <tileset firstgid="25525" name="walls_interior_detailing_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="25213" name="walls_interior_detailing_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/walls_interior_detailing_01.png" width="512" height="2048"/>
  </tileset>
- <tileset firstgid="25653" name="walls_interior_house_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="25341" name="walls_interior_house_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/walls_interior_house_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="25717" name="walls_interior_house_02" tilewidth="64" tileheight="128">
+ <tileset firstgid="25405" name="walls_interior_house_02" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/walls_interior_house_02.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="25781" name="walls_interior_house_03" tilewidth="64" tileheight="128">
+ <tileset firstgid="25469" name="walls_interior_house_03" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/walls_interior_house_03.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="25845" name="walls_interior_house_04" tilewidth="64" tileheight="128">
+ <tileset firstgid="25533" name="walls_interior_house_04" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/walls_interior_house_04.png" width="512" height="2048"/>
  </tileset>
- <tileset firstgid="25973" name="walls_special_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="25661" name="walls_special_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/walls_special_01.png" width="512" height="2048"/>
  </tileset>
- <tileset firstgid="26101" name="weapons_01" tilewidth="64" tileheight="128">
+ <tileset firstgid="25789" name="weapons_01" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/weapons_01.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="26165" name="z_templates_letterboard" tilewidth="64" tileheight="128">
+ <tileset firstgid="25853" name="z_templates_letterboard" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/z_templates_letterboard.png" width="314" height="233"/>
  </tileset>
- <tileset firstgid="26177" name="z_templates_wallcutaways" tilewidth="64" tileheight="128">
+ <tileset firstgid="25857" name="z_templates_wallcutaways" tilewidth="64" tileheight="128">
   <image source="../../../../Downloads/TileZed+WorldEd-Sep-08-2022-64bit/TileZed/tiles/z_templates_wallcutaways.png" width="640" height="1024"/>
  </tileset>
  <layer name="0_Floor" width="300" height="300">
@@ -1019,16 +1019,8 @@
  </bmp-settings>
  <bmp-image index="0" seed="1">
   <color rgb="0 138 255"/>
-  <color rgb="120 120 120"/>
-  <color rgb="145 135 60"/>
   <pixels>
-   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
-  </pixels>
- </bmp-image>
- <bmp-image index="1" seed="1">
-  <color rgb="0 255 0"/>
-  <pixels>
-   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
+   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
   </pixels>
  </bmp-image>
 </map>
